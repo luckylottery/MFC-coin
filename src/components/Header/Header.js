@@ -3,7 +3,7 @@ import { Image } from "../Image/Image"
 
 export const Header = () => {
   return (
-    <header className="flex items-center px-5 py-2 gap-5">
+    <header className="flex items-center px-5 py-2 gap-5 md:w-5/6 mx-auto">
       <Link to="/home">
         <Image
           src="/assets/Logo Square BG White-01.png"
