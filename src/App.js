@@ -1,8 +1,8 @@
+import { AppRouter } from "./routers/AppRouter";
+
 function App() {
   return (
-    <div>
-      Welcome to MCF
-    </div>
+    <AppRouter />
   );
 }
 
