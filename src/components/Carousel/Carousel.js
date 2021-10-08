@@ -33,17 +33,17 @@ export const Carousel = () => {
         arrows={false}
         infinite={true}
       >
-        <div>Memecoin: <span>10.51 USD</span></div>
-        <div>Memecoin: <span>10.51 USD</span></div>
-        <div>Memecoin: <span>10.51 USD</span></div>
-        <div>Memecoin: <span>10.51 USD</span></div>
-        <div>Memecoin: <span>10.51 USD</span></div>
-        <div>Memecoin: <span>10.51 USD</span></div>
-        <div>Memecoin: <span>10.51 USD</span></div>
-        <div>Memecoin: <span>10.51 USD</span></div>
-        <div>Memecoin: <span>10.51 USD</span></div>
-        <div>Memecoin: <span>10.51 USD</span></div>
-        <div>Memecoin: <span>10.51 USD</span></div>
+        <div className="text-center">Memecoin: <span>10.51 USD</span></div>
+        <div className="text-center">Memecoin: <span>10.51 USD</span></div>
+        <div className="text-center">Memecoin: <span>10.51 USD</span></div>
+        <div className="text-center">Memecoin: <span>10.51 USD</span></div>
+        <div className="text-center">Memecoin: <span>10.51 USD</span></div>
+        <div className="text-center">Memecoin: <span>10.51 USD</span></div>
+        <div className="text-center">Memecoin: <span>10.51 USD</span></div>
+        <div className="text-center">Memecoin: <span>10.51 USD</span></div>
+        <div className="text-center">Memecoin: <span>10.51 USD</span></div>
+        <div className="text-center">Memecoin: <span>10.51 USD</span></div>
+        <div className="text-center">Memecoin: <span>10.51 USD</span></div>
       </RMCarousel>
     </div>
   )
