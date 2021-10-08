@@ -26,7 +26,7 @@ export const Carousel = () => {
   };
 
   return (
-    <div className="w-full border-b-2 border-t-2 px-5">
+    <div className="w-full border-b-2 border-t-2 px-5 my-5">
       <RMCarousel
         responsive={responsive}
         autoPlay={true}
