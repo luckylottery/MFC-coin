@@ -15,6 +15,7 @@ export const Banner = () => {
       responsive={responsive}
       arrows={true}
       infinite={true}
+      className="z-0 relative"
     >
       <Image
         src="https://img.freepik.com/vector-gratis/banner-negro-formas-geometricas-amarillas_1017-32327.jpg?size=626&ext=jpg"
