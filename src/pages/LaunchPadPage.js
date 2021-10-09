@@ -7,7 +7,7 @@ export const LaunchPadPage = () => {
     <>
       <Header />
       <Banner />
-      {/* <Drawer /> */}
+      <Drawer />
     </>
   )
 }
