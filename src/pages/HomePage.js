@@ -14,11 +14,11 @@ export const HomePage = () => {
       <Banner />
       <div className="flex flex-wrap justify-center gap-10 my-16 max-w-6xl mx-auto">
         <CardButtons buttons={["Launch", "Mint", "Lock"]} />
-        <CardImage image="http://www.gamengadgets.com/wp-content/uploads/2019/03/lottery.jpg" buttonText="PLAY NOW" />
+        <CardImage image="https://i.redd.it/qggwem5ziws31.jpg" buttonText="PLAY NOW" />
         <CardButtons buttons={["Slots", "Poker", "Roulette", "Blackjack"]} />
-        <CardImage image="http://www.gamengadgets.com/wp-content/uploads/2019/03/lottery.jpg" buttonText="Get Started" />
-        <CardImage image="http://www.gamengadgets.com/wp-content/uploads/2019/03/lottery.jpg" buttonText="Factory Swap DEX" />
-        <CardImage image="http://www.gamengadgets.com/wp-content/uploads/2019/03/lottery.jpg" />
+        <CardImage image="https://i.redd.it/qggwem5ziws31.jpg" buttonText="Get Started" />
+        <CardImage image="https://i.redd.it/qggwem5ziws31.jpg" buttonText="Factory Swap DEX" />
+        <CardImage image="https://i.redd.it/qggwem5ziws31.jpg" />
       </div>
       <Footer />
     </>
