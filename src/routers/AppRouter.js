@@ -1,7 +1,8 @@
 import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-dom";
-import { HomePage } from "../Pages/HomePage";
-import { LaunchPadPage } from "../Pages/LaunchPadPage";
-import { TokenCreationPage } from "../Pages/TokenCreationPage";
+import { HomePage } from "../pages/HomePage";
+import { LaunchPadPage } from "../pages/LaunchPadPage";
+import { TokenCreationPage } from "../pages/TokenCreationPage";
+
 
 export const AppRouter = () => {
   return (
