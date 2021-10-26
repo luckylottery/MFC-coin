@@ -3,8 +3,8 @@ import { HomePage } from "../pages/HomePage";
 import { LaunchPadHomePage } from "../pages/LaunchPadHomePage";
 import { LaunchPadListPage } from "../pages/LaunchPadListPage";
 import { TokenContributionPage } from "../pages/TokenContributionPage";
+import { LaunchpadToken } from "../pages/LaunchpadToken";
 import { TokenCreationPage } from "../pages/TokenCreationPage";
-
 
 export const AppRouter = () => {
   return (
@@ -13,8 +13,9 @@ export const AppRouter = () => {
         <Route exact path="/home" component={HomePage} />
         <Route exact path="/launchpad" component={LaunchPadHomePage} />
         <Route exact path="/launchpad-list" component={LaunchPadListPage} />
-        <Route exact path="/token-creation" component={TokenCreationPage} />
+        <Route exact path="/launchpad-token" component={LaunchpadToken} />
         <Route exact path="/token-contribution" component={TokenContributionPage} />
+        <Route exact path="/token-creation" component={TokenCreationPage} />
 
         <Redirect to="/home" />
       </Switch>
