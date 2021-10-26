@@ -9,7 +9,9 @@ export const HomePage = () => {
   return (
     <>
       <Header />
+      <div className="my-5">
       <Carousel />
+      </div>
       <Banner />
       <div className="flex flex-wrap justify-center gap-10 my-16 max-w-6xl mx-auto">
         <CardButtons buttons={["Launch", "Mint", "Lock"]} />
