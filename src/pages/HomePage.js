@@ -4,7 +4,6 @@ import { CardImage } from "../components/Cards/CardImage/CardImage"
 import { Carousel } from "../components/Carousel/Carousel"
 import { Footer } from "../components/Footer/Footer"
 import { Header } from "../components/Header/Header"
-import { Image } from "../components/Image/Image"
 
 export const HomePage = () => {
   return (

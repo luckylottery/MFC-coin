@@ -1,9 +1,9 @@
 import { Image } from '../../Image/Image'
 
-export const CardImage = ({ image, buttonText }) => {
+export const CardImage = ({ image, buttonText, size = "60" }) => {
   return (
     <div className="p-5 bg-gray-300 rounded">
-      <div className="flex flex-col justify-center items-center gap-5 h-60 w-60">
+      <div className={`flex flex-col justify-center items-center gap-5 h-${size} w-${size}`}>
         <Image
           src={image}
           className="h-full w-full"

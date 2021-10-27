@@ -3,7 +3,7 @@ import { Header } from "../components/Header/Header"
 import { LaunchpadContent } from "../components/LaunchpadContent/LaunchpadContent"
 import { SearchUtility } from "../components/SearchUtility/SearchUtility"
 
-export const LaunchPadPage = () => {
+export const LaunchPadListPage = () => {
   return (
     <>
       <Header />
