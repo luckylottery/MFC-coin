@@ -6,6 +6,7 @@ import { TokenContributionPage } from "../pages/TokenContributionPage";
 import { LaunchpadToken } from "../pages/LaunchpadToken";
 import { TokenCreationPage } from "../pages/TokenCreationPage";
 import { TokenCreationFormPage } from "../pages/TokenCreationFormPage";
+import { LiquidityLockPage } from "../pages/LiquidityLockPage";
 
 export const AppRouter = () => {
   return (
@@ -18,6 +19,7 @@ export const AppRouter = () => {
         <Route exact path="/token-contribution" component={TokenContributionPage} />
         <Route exact path="/token-creation" component={TokenCreationPage} />
         <Route exact path="/token-creation-form" component={TokenCreationFormPage} />
+        <Route exact path="/liquidity-lock" component={LiquidityLockPage} />
 
         <Redirect to="/home" />
       </Switch>
