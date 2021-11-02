@@ -38,7 +38,7 @@ export const Sidebar = () => {
             routes.map(({ link, name, children, icon: Icon }) => (
               <div
                 key={link}
-                className={`${isOpen ? "py-3" : "py-1"} flex flex-col px-5 transition-all	duration-700 cursor-pointer hover:bg-blue-100`}
+                className={`${isOpen ? "py-3 hover:bg-blue-100" : "py-1"} flex flex-col px-5 transition-all	duration-700 cursor-pointer`}
               >
                 <div className="flex gap-5 items-center">
                   <Icon className="text-xl" />
