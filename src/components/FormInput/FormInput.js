@@ -5,12 +5,12 @@ export const FormInput = ({ type = "input", placeholder = "" }) => {
       {
         type === "input" ? (
           <input
-            className="w-full border-2 border-rounded px-2 py-1 md:flex-1"
+            className="w-full border-2 border-rounded px-2 py-1 outline-none md:flex-1"
             placeholder={placeholder}
           />
         ) : (
           <textarea
-            className="w-full border-2 border-rounded px-2 py-1 resize-none	h-20 md:flex-1"
+            className="w-full border-2 border-rounded px-2 py-1 resize-none	h-20 outline-none md:flex-1"
             placeholder={placeholder}
           />
         )

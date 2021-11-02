@@ -1,28 +1,24 @@
 import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-dom";
+import { Navbar } from "../components/Navbar/Navbar";
+import { Sidebar } from "../components/Sidebar/Sidebar";
 import { HomePage } from "../pages/HomePage";
-import { LaunchPadHomePage } from "../pages/LaunchPadHomePage";
-import { LaunchPadListPage } from "../pages/LaunchPadListPage";
-import { TokenContributionPage } from "../pages/TokenContributionPage";
-import { LaunchpadToken } from "../pages/LaunchpadToken";
-import { TokenCreationPage } from "../pages/TokenCreationPage";
-import { TokenCreationFormPage } from "../pages/TokenCreationFormPage";
-import { LiquidityLockPage } from "../pages/LiquidityLockPage";
 
 export const AppRouter = () => {
   return (
     <Router>
-      <Switch>
-        <Route exact path="/home" component={HomePage} />
-        <Route exact path="/launchpad" component={LaunchPadHomePage} />
-        <Route exact path="/launchpad-list" component={LaunchPadListPage} />
-        <Route exact path="/launchpad-token" component={LaunchpadToken} />
-        <Route exact path="/token-contribution" component={TokenContributionPage} />
-        <Route exact path="/token-creation" component={TokenCreationPage} />
-        <Route exact path="/token-creation-form" component={TokenCreationFormPage} />
-        <Route exact path="/liquidity-lock" component={LiquidityLockPage} />
+      <div className="w-screen">
+        <div className="flex">
+          <Sidebar />
+          <div className="w-full overflow-hidden">
+            <Navbar />
+            <Switch>
+              <Route exact path="/home" component={HomePage} />
 
-        <Redirect to="/home" />
-      </Switch>
+              <Redirect to="/home" />
+            </Switch>
+          </div>
+        </div>
+      </div>
     </Router>
   )
 }
