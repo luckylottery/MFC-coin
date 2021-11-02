@@ -12,7 +12,7 @@ export const Sidebar = () => {
   }
 
   return (
-    <div className={`hidden lg:flex flex-col items-center relative bg-blue-200 shadow-lg h-screen transition-all ${isOpen ? "w-60" : "w-16"}`}>
+    <div className={`hidden lg:flex flex-col items-center relative bg-blue-200 shadow-lg h-screen transition-all z-50 ${isOpen ? "w-60" : "w-16"}`}>
       <div
         className={`${isOpen ? "block" : "hidden"} absolute -right-5 top-10 bg-blue-300 p-2.5 rounded cursor-pointer`}
         onClick={toggleState}
