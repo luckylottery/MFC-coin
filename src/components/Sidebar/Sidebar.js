@@ -1,84 +1,64 @@
 import { useState } from "react"
-import { GrHomeRounded, GrMenu } from "react-icons/gr";
-import { FaChevronDown } from "react-icons/fa";
-
-const routes = [
-  {
-    link: "/home",
-    name: "Home",
-  },
-  {
-    link: "/factory",
-    name: "Home",
-  },
-  {
-    link: "/launchpad",
-    name: "Home",
-    children: [
-      {
-        link: "/dashboard",
-        name: "dashboard"
-      },
-      {
-        link: "/manage",
-        name: "Create & Manage"
-      }
-    ]
-  },
-  {
-    link: "/lottery",
-    name: "Lottery",
-  },
-  {
-    link: "/casino",
-    name: "Casino",
-  },
-  {
-    link: "/staking",
-    name: "Staking/Farming",
-  },
-  {
-    link: "/arcade",
-    name: "Arcade Games",
-  },
-];
+import { GrMenu } from "react-icons/gr";
+import { Image } from "../Image/Image";
+import { routes } from "../../routes";
 
 export const Sidebar = () => {
 
-  const [state, setState] = useState(true);
+  const [isOpen, setIsOpen] = useState(true);
 
   const toggleState = () => {
-    setState(!state);
+    setIsOpen(!isOpen);
   }
 
-
-
   return (
-    <div className={`flex flex-col items-center relative bg-gray-200 shadow-lg h-screen transition-all ${state ? "w-60" : "w-16"}`}>
+    <div className={`flex flex-col items-center relative bg-blue-200 shadow-lg h-screen transition-all ${isOpen ? "w-60" : "w-16"}`}>
       <div
-        className={`${state ? "block" : "hidden"} absolute -right-5 top-10 bg-blue-300 p-2.5 rounded cursor-pointer`}
+        className={`${isOpen ? "block" : "hidden"} absolute -right-5 top-10 bg-blue-300 p-2.5 rounded cursor-pointer`}
         onClick={toggleState}
       >
         <GrMenu className="text-2xl font-bold" />
       </div>
       <div className="pt-5 h-full w-full flex justify-center w-full flex-col gap-10">
-        <GrMenu
-          className={`${state ? "hidden" : "block"} text-2xl font-bold cursor-pointer mx-auto`}
-          onClick={toggleState}
-        />
-        <div className="flex flex-col justify-center px-5 flex-1 gap-10">
+        {
+          isOpen ? (
+            <Image
+              src="/assets/Logo Square BG White-01.png"
+              className="self-center rounded-full h-16 w-16 lg:h-20 xl:w-24 xl:h-24"
+            />
+          ) : (
+            <GrMenu
+              className="font-bold block text-2xl cursor-pointer mx-auto"
+              onClick={toggleState}
+            />
+          )
+        }
+        <div className={`${isOpen ? "" : "justify-center gap-10"} flex flex-col flex-1`}>
           {
-            routes.map(({ link, name, children }) => (
+            routes.map(({ link, name, children, icon: Icon }) => (
               <div
                 key={link}
-                className="flex items-center gap-2"
+                className={`${isOpen ? "py-3" : "py-1"} flex flex-col px-5 transition-all	duration-700 cursor-pointer hover:bg-blue-100`}
               >
-                <GrHomeRounded className="text-xl" />
-                <div className={`${state ? "flex" : "hidden"} items-center flex-col bg-red-300 flex-1 gap-5`}>
-                  <h1 className="text-xl">{name}</h1>
+                <div className="flex gap-5 items-center">
+                  <Icon className="text-xl" />
+                  <h1 className={`${isOpen ? "block" : "hidden"} text-blue-900 font-bold text-xl`}>{name}</h1>
+                </div>
+                <div className={`${isOpen ? "block" : "hidden"}`}>
                   {
                     children && (
-                      <div>holiwi</div>
+                      <div className="ml-10">
+                        {
+                          children.map(({ link, name }) => (
+                            <h2
+                              key={link}
+                              className="rounded py-1 px-2 transition-all	duration-700 hover:bg-blue-700 hover:text-white"
+                            >
+                              {name}
+                            </h2>
+                          ))
+                        }
+                      </div>
                     )
                   }
                 </div>
