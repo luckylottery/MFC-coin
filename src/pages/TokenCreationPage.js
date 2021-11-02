@@ -1,18 +1,24 @@
+import { CardImage } from "../components/Cards/CardImage/CardImage"
 import { Footer } from "../components/Footer/Footer"
 import { Header } from "../components/Header/Header"
-import { Image } from "../components/Image/Image"
-import { TokenSection } from "../components/TokenPage/TokenSection/TokenSection"
 
 export const TokenCreationPage = () => {
   return (
-    <>
+    <div className="h-screen flex flex-col justify-between">
       <Header />
-      <Image
-        src="https://static.vecteezy.com/system/resources/previews/003/321/399/original/axie-infinity-axs-token-symbol-with-crypto-currency-themed-banner-vector.jpg"
-        className="my-10 w-full h-96"
-      />
-      <TokenSection />
+      <div className="flex justify-between items-center gap-10 flex-col mx-auto w-9/12 md:flex-row lg:w-1/2">
+        <CardImage
+          buttonText="Create your Own"
+          image="https://i.redd.it/qggwem5ziws31.jpg"
+          size={60}
+        />
+        <CardImage
+          buttonText="Get Help"
+          image="https://i.redd.it/qggwem5ziws31.jpg"
+          size={60}
+        />
+      </div>
       <Footer />
-    </>
+    </div>
   )
 }
