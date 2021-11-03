@@ -7,7 +7,7 @@ import { Drawer } from "../Drawer/Drawer";
 export const Navbar = () => {
   return (
     <div className="flex justify-between items-center bg-blue-500 w-full py-2 px-2 lg:px-10">
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-3 flex-1">
         <Drawer />
         <Image
           src="/assets/Logo Square BG White-01.png"
@@ -15,7 +15,7 @@ export const Navbar = () => {
         />
         <BiHelpCircle className="cursor-pointer text-3xl text-blue-100" />
       </div>
-      <div className="hidden sm:flex text-4xl gap-5 text-blue-100">
+      <div className="hidden sm:flex text-4xl gap-5 text-blue-100 flex-1">
         <AiFillFacebook className="cursor-pointer" />
         <AiFillTwitterSquare className="cursor-pointer" />
         <FaDiscord className="cursor-pointer" />
