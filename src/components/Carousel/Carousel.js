@@ -17,7 +17,7 @@ export const Carousel = () => {
       arrows={true}
       infinite={true}
       showDots={true}
-      className="mx-auto my-10 w-11/12 h-72 rounded"
+      className="mx-auto my-10 w-11/12 h-72 rounded z-0"
     >
       <Image
         src="https://i2.wp.com/criptotendencia.com/wp-content/uploads/2019/09/Gods-Unchained-Crypto-Game.jpg?fit=1200%2C630&ssl=1"

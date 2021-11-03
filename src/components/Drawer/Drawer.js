@@ -13,7 +13,7 @@ export const Drawer = () => {
         className="text-3xl font-bold lg:hidden"
         onClick={() => setIsOpen(true)}
       />
-      <div className={`${isOpen ? "w-screen h-screen" : "w-0 h-0"} fixed transition top-0 left-0 z-0 drawer-container`}>
+      <div className={`${isOpen ? "w-screen h-screen" : "w-0 h-0"} fixed transition top-0 left-0 z-0 drawer-container z-10 lg:hidden`}>
         <div className={`${isOpen ? "w-11/12 p-5" : "w-0"} fixed duration-300 top-0 left-0 h-full bg-white`}>
           <div className={`${isOpen ? "flex" : "hidden"} flex-col justify-start gap-5 h-full`}>
             <div className="flex justify-between items-center">
