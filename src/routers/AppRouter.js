@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-dom";
+import { Footer } from "../components/Footer/Footer";
 import { Navbar } from "../components/Navbar/Navbar";
 import { Sidebar } from "../components/Sidebar/Sidebar";
 import { HomePage } from "../pages/HomePage";
@@ -11,11 +12,14 @@ export const AppRouter = () => {
           <Sidebar />
           <div className="w-full overflow-hidden">
             <Navbar />
+
             <Switch>
               <Route exact path="/home" component={HomePage} />
 
               <Redirect to="/home" />
             </Switch>
+            
+            <Footer />
           </div>
         </div>
       </div>
