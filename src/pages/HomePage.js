@@ -6,7 +6,7 @@ export const HomePage = () => {
   return (
     <div className="box-border">
       <Carousel />
-      <div className="grid grid-cols-2 mx-auto w-11/12 gap-10 mb-10">
+      <main className="grid grid-cols-2 mx-auto w-11/12 gap-10 mb-10">
         <Image
           src="https://st.depositphotos.com/1006318/51653/v/600/depositphotos_516539424-stock-illustration-industrial-factory-bitcoin-mining-conveyor.jpg"
           className="w-full h-60 rounded"
@@ -27,7 +27,7 @@ export const HomePage = () => {
           src="https://media.coolwallet.io/wp-content/uploads/2021/02/staking-2.png"
           className="w-full h-60 rounded"
         />
-      </div>
+      </main>
     </div>
   )
 }
