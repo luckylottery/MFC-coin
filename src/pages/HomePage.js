@@ -6,7 +6,7 @@ export const HomePage = () => {
   return (
     <div className="box-border">
       <Carousel />
-      <main className="grid grid-cols-2 mx-auto w-11/12 gap-10 mb-10">
+      <main className="grid md:grid-cols-2 mx-auto w-11/12 gap-10 mb-10">
         <Image
           src="https://st.depositphotos.com/1006318/51653/v/600/depositphotos_516539424-stock-illustration-industrial-factory-bitcoin-mining-conveyor.jpg"
           className="w-full h-60 rounded"
