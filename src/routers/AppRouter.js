@@ -7,20 +7,18 @@ import { HomePage } from "../pages/HomePage";
 export const AppRouter = () => {
   return (
     <Router>
-      <div className="w-screen">
-        <div className="flex">
-          <Sidebar />
-          <div className="w-full overflow-hidden">
-            <Navbar />
+      <div className="flex">
+        <Sidebar />
+        <div className="flex-1 overflow-hidden">
+          <Navbar />
 
-            <Switch>
-              <Route exact path="/home" component={HomePage} />
+          <Switch>
+            <Route exact path="/home" component={HomePage} />
 
-              <Redirect to="/home" />
-            </Switch>
-            
-            <Footer />
-          </div>
+            <Redirect to="/home" />
+          </Switch>
+
+          <Footer />
         </div>
       </div>
     </Router>
