@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from 'react-router-dom';
 import { GrMenu } from "react-icons/gr";
 import { Image } from "../Image/Image";
 import { routes } from "../../routes";
@@ -42,25 +43,29 @@ export const Sidebar = () => {
                   key={link}
                   className={`${isOpen ? "py-3 hover:bg-blue-100" : "py-1"} flex flex-col px-5 transition-all	duration-700 cursor-pointer`}
                 >
-                  <div className="flex gap-5 items-center">
+                  <Link
+                    to={link}
+                    className="flex gap-5 items-center"
+                  >
                     <Icon className="text-xl" />
                     <h1 className={`${isOpen ? "block" : "hidden"} text-blue-900 font-bold text-xl`}>{name}</h1>
-                  </div>
-                  <div className={`${isOpen ? "block" : "hidden"}`}>
+                  </Link>
+                  <div className={`${isOpen ? "flex flex-col ml-10" : "hidden"}`}>
                     {
                       children && (
-                        <div className="ml-10">
+                        <>
                           {
                             children.map(({ link, name }) => (
-                              <h2
+                              <Link
                                 key={link}
+                                to={link}
                                 className="rounded py-1 px-2 transition-all	duration-700 hover:bg-blue-700 hover:text-white"
                               >
                                 {name}
-                              </h2>
+                              </Link>
                             ))
                           }
-                        </div>
+                        </>
                       )
                     }
                   </div>

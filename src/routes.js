@@ -2,6 +2,7 @@ import { GrGamepad, GrHomeRounded, GrLaunch } from "react-icons/gr";
 import { MdOutlineCasino } from "react-icons/md";
 import { GiFactory, GiFarmTractor } from "react-icons/gi";
 import { SiPlotly } from "react-icons/si";
+import { AiFillFire } from "react-icons/ai";
 
 export const routes = [
   {
@@ -13,6 +14,17 @@ export const routes = [
     link: "/factory",
     name: "Factory",
     icon: GiFactory,
+  },
+  {
+    link: "/vetted",
+    name: "IDOs",
+    icon: AiFillFire,
+    children: [
+      {
+        link: "/vetted",
+        name: "Vetted Projects",
+      },
+    ]
   },
   {
     link: "/launchpad",

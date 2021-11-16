@@ -1,7 +1,6 @@
 import { useState } from "react"
 import { GrMenu } from "react-icons/gr";
 import { routes } from "../../routes";
-
 import { Image } from "../Image/Image";
 
 export const Drawer = () => {

@@ -3,6 +3,7 @@ import { Footer } from "../components/Footer/Footer";
 import { Navbar } from "../components/Navbar/Navbar";
 import { Sidebar } from "../components/Sidebar/Sidebar";
 import { HomePage } from "../pages/HomePage";
+import { VettedPage } from "../pages/VettedPage";
 
 export const AppRouter = () => {
   return (
@@ -14,6 +15,7 @@ export const AppRouter = () => {
 
           <Switch>
             <Route exact path="/home" component={HomePage} />
+            <Route exact path="/vetted" component={VettedPage} />
 
             <Redirect to="/home" />
           </Switch>
