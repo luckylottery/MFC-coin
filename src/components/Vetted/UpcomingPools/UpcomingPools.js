@@ -9,7 +9,7 @@ export const UpcomingPools = ({ upcomingPools }) => {
         {
           upcomingPools.map((upcomingPool) => (
             <UpcomingPool
-              key={upcomingPool.name}
+              key={upcomingPool.projectId}
               upcomingPoolData={upcomingPool}
             />
           ))

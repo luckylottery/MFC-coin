@@ -1,9 +1,19 @@
+import { useHistory } from "react-router";
+
 export const AllPoolRow = ({ poolData }) => {
 
-  const { name, image, swapRate, totalProgress, status } = poolData;
+  const { name, image, swapRate, totalProgress, status, projectId } = poolData;
+  const router = useHistory();
+
+  const openVettedProject = () => {
+    router.push(`/vetted/${projectId}`);
+  }
 
   return (
-    <tr className="font-bold border-b-2 h-20 border-gray-500 cursor-pointer transition duration-300 hover:bg-gray-700 hover:text-white transform">
+    <tr
+      className="font-bold border-b-2 h-20 border-gray-500 cursor-pointer transition duration-300 hover:bg-gray-700 hover:text-white transform"
+      onClick={openVettedProject}
+    >
       <td className="px-5 py-2.5">
         <div className="flex flex-col md:flex-row text-center justify-center items-center gap-2">
           <img

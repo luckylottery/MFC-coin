@@ -4,6 +4,7 @@ import { Navbar } from "../components/Navbar/Navbar";
 import { Sidebar } from "../components/Sidebar/Sidebar";
 import { HomePage } from "../pages/HomePage";
 import { VettedPage } from "../pages/VettedPage";
+import { VettedProjectPage } from "../pages/VettedProjectPage";
 
 export const AppRouter = () => {
   return (
@@ -16,6 +17,7 @@ export const AppRouter = () => {
           <Switch>
             <Route exact path="/home" component={HomePage} />
             <Route exact path="/vetted" component={VettedPage} />
+            <Route exact path="/vetted/:projectId" component={VettedProjectPage} />
 
             <Redirect to="/home" />
           </Switch>

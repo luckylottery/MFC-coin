@@ -1,9 +1,14 @@
+import { Link } from "react-router-dom";
+
 export const UpcomingPool = ({ upcomingPoolData }) => {
 
-  const { image, chain, name, status, totalRaise, roundOpens, audited } = upcomingPoolData;
+  const { image, chain, name, status, totalRaise, roundOpens, audited, projectId } = upcomingPoolData;
 
   return (
-    <div className="relative shadow-lg	 font-bold cursor-pointer bg-indigo-900 rounded-xl w-full p-5 border border-indigo-900 transition duration-300 transform hover:scale-105 hover:border-white">
+    <Link
+      to={`/vetted/${projectId}`}
+      className="relative shadow-lg font-bold cursor-pointer bg-indigo-900 rounded-xl w-full p-5 border border-indigo-900 transition duration-300 transform hover:scale-105 hover:border-white"
+    >
       <div className="flex justify-between items-center">
         <img
           alt="logo"
@@ -32,8 +37,6 @@ export const UpcomingPool = ({ upcomingPoolData }) => {
           AUDITED
         </div>
       )}
-
-
-    </div>
+    </Link>
   )
 }

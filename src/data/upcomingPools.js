@@ -2,6 +2,7 @@ import { BsTwitter, BsTelegram, BsFacebook, BsMedium, BsDiscord } from 'react-ic
 
 export const upcomingPools = [
   {
+    projectId: "1",
     upcoming: true,
     audited: false,
     chain: "polygon",
@@ -46,6 +47,7 @@ export const upcomingPools = [
     ],
   },
   {
+    projectId: "2",
     upcoming: true,
     audited: false,
     chain: "polygon",
@@ -90,6 +92,7 @@ export const upcomingPools = [
     ],
   },
   {
+    projectId: "3",
     upcoming: true,
     audited: true,
     chain: "polygon",
@@ -134,6 +137,7 @@ export const upcomingPools = [
     ],
   },
   {
+    projectId: "4",
     upcoming: true,
     audited: false,
     chain: "polygon",
@@ -178,6 +182,7 @@ export const upcomingPools = [
     ],
   },
   {
+    projectId: "5",
     upcoming: true,
     audited: true,
     chain: "polygon",
@@ -222,6 +227,7 @@ export const upcomingPools = [
     ],
   },
   {
+    projectId: "6",
     upcoming: false,
     audited: true,
     chain: "polygon",
@@ -266,6 +272,7 @@ export const upcomingPools = [
     ],
   },
   {
+    projectId: "7",
     upcoming: false,
     audited: true,
     chain: "polygon",
@@ -310,6 +317,7 @@ export const upcomingPools = [
     ],
   },
   {
+    projectId: "8",
     upcoming: false,
     audited: true,
     chain: "polygon",
@@ -354,6 +362,7 @@ export const upcomingPools = [
     ],
   },
   {
+    projectId: "9",
     upcoming: false,
     audited: true,
     chain: "polygon",
@@ -398,6 +407,7 @@ export const upcomingPools = [
     ],
   },
   {
+    projectId: "10",
     upcoming: false,
     audited: true,
     chain: "polygon",
@@ -442,6 +452,7 @@ export const upcomingPools = [
     ],
   },
   {
+    projectId: "11",
     upcoming: false,
     audited: true,
     chain: "polygon",
@@ -486,6 +497,7 @@ export const upcomingPools = [
     ],
   },
   {
+    projectId: "12",
     upcoming: false,
     audited: true,
     chain: "polygon",
@@ -530,6 +542,7 @@ export const upcomingPools = [
     ],
   },
   {
+    projectId: "13",
     upcoming: false,
     audited: true,
     chain: "polygon",
@@ -574,6 +587,7 @@ export const upcomingPools = [
     ],
   },
   {
+    projectId: "14",
     upcoming: false,
     audited: true,
     chain: "polygon",
@@ -618,6 +632,7 @@ export const upcomingPools = [
     ],
   },
   {
+    projectId: "15",
     upcoming: false,
     audited: true,
     chain: "polygon",
