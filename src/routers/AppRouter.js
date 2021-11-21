@@ -5,6 +5,7 @@ import { Sidebar } from "../components/Sidebar/Sidebar";
 import { HomePage } from "../pages/HomePage";
 import { VettedPage } from "../pages/VettedPage";
 import { VettedProjectPage } from "../pages/VettedProjectPage";
+import {CreateCoinPage} from "../pages/CreateCoinPage";
 
 export const AppRouter = () => {
   return (
@@ -18,6 +19,7 @@ export const AppRouter = () => {
             <Route exact path="/home" component={HomePage} />
             <Route exact path="/vetted" component={VettedPage} />
             <Route exact path="/vetted/:projectId" component={VettedProjectPage} />
+            <Route exact path="/create-coin" component={CreateCoinPage} />
 
             <Redirect to="/home" />
           </Switch>
