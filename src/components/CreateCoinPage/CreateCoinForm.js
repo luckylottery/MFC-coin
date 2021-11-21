@@ -2,6 +2,7 @@ import {Form, Input, Button} from 'antd';
 import Checkbox from "antd/es/checkbox/Checkbox";
 import Switch from "react-switch";
 import {useState} from "react";
+import React from 'react'
 
 export const CreateCoinForm = ({selectedCrypto}, props) => {
     const [form] = Form.useForm();
@@ -71,7 +72,7 @@ export const CreateCoinForm = ({selectedCrypto}, props) => {
             </Form.Item>
             <Form.Item name="advancedSettings" label={<label className="font-bold">Advanced Settings</label>}
                        className="px-4" initialValue={advancedSettings} getValueFromEvent={(data) => data}>
-                <Switch checked={advancedSettings} className="mt-4" onColor="#0000FF" onChange={() => {
+                <Switch checked={advancedSettings} className="mt-4" onColor="#4c1d95" onChange={() => {
                     setAdvancedSettings(!advancedSettings)
                 }}/>
             </Form.Item>
@@ -100,7 +101,7 @@ export const CreateCoinForm = ({selectedCrypto}, props) => {
                 </Checkbox.Group>
             </Form.Item>
             <Form.Item className="pb-4 pl-4">
-                <Button type="primary" htmlType="submit" className="font-bold border border-indigo-600 rounded p-2">
+                <Button type="primary" htmlType="submit" className="font-bold border border-indigo-900 hover:bg-purple-800 hover:text-gray-50 duration-300 rounded p-2">
                     Submit
                 </Button>
             </Form.Item>

@@ -22,25 +22,28 @@ export const CryptoOptions = ({selectedCrypto: selectedCryptoFromProps}) => {
     }
 
     return (
-        <div className="grid grid-cols-1 xl:grid-cols-2 justify-items-center gap-y-4 py-4 px-1 text-sm" >
+        <div className="grid grid-cols-1 xl:grid-cols-2 justify-items-center gap-y-4 py-4 px-1 text-sm">
             <div className="xl:col-start-2 xl:col-end-3 justify-self-end w-11/12 flex justify-end">
-                <button className="m-1 px-2 border-2 border-gray-200 rounded text-gray-100 hover:bg-gray-100 hover:text-gray-900 duration-300"
-                        onClick={() => setPage(PREVIOUS_PAGE)}>{"<"}</button>
-                <button className="m-1 px-2 border-2 border-gray-200 rounded text-gray-100 hover:bg-gray-100 hover:text-gray-900 duration-300" onClick={() => setPage(NEXT_PAGE)}>>
+                <button
+                    className="m-1 px-2 border-2 border-gray-200 rounded text-gray-100 hover:bg-gray-100 hover:text-gray-900 duration-300"
+                    onClick={() => setPage(PREVIOUS_PAGE)}>{"<"}</button>
+                <button
+                    className="m-1 px-2 border-2 border-gray-200 rounded text-gray-100 hover:bg-gray-100 hover:text-gray-900 duration-300"
+                    onClick={() => setPage(NEXT_PAGE)}>>
                 </button>
             </div>
 
             {cryptoOptions.map((crypto, index) => {
                 let minIndex = 0
                 if (selectedPage > 1) {
-                    for (let i=1; i<selectedPage; i++) {
+                    for (let i = 1; i < selectedPage; i++) {
                         minIndex += 10
                     }
                 }
                 if (index >= minIndex && index < Math.ceil(selectedPage * 10)) {
                     return (
                         <button
-                            key={index}
+                            key={crypto?.name}
                             className="w-11/12
                     justify-center sm:justify-start
                     flex items-center
@@ -53,9 +56,9 @@ export const CryptoOptions = ({selectedCrypto: selectedCryptoFromProps}) => {
                     hover:text-gray-900
                     duration-300
                     rounded
-                    ">
+                    " style={{...(selectedCrypto===crypto?.name?{backgroundColor: "#F3F4F6", color: "black"}:{})}} onClick={() => setSelectedCrypto(crypto?.name)}>
                             <img src="https://i.picsum.photos/id/315/50/20"/>
-                            <p>{crypto.name}</p>
+                            <p>{crypto?.name}</p>
                         </button>
                     )
 
