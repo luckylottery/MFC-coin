@@ -1,12 +1,20 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {cryptoOptions} from "../../data/CreateCoinAvailableCryptos";
 
 
-export const CryptoOptions = ({selectedCrypto: selectedCryptoFromProps}) => {
-    const [selectedPage, setSelectedPage] = useState(1)
-    const [selectedCrypto, setSelectedCrypto] = useState(selectedCryptoFromProps)
+export const CryptoOptions = ({selectedCrypto, setSelectedCrypto, routeId }) => {
+    const [selectedPage, setSelectedPage] = useState( 1)
     const NEXT_PAGE = "nextPage"
     const PREVIOUS_PAGE = "prevousPage"
+
+
+    useEffect(() => {
+        cryptoOptions.forEach((crypto, index) => {
+            if (crypto.name === routeId) {
+                setSelectedPage(Math.ceil((index + 1) / 10))
+            }
+        })
+    }, [routeId])
 
     function setPage(action) {
         if (action === NEXT_PAGE) {
@@ -56,13 +64,14 @@ export const CryptoOptions = ({selectedCrypto: selectedCryptoFromProps}) => {
                     hover:text-gray-900
                     duration-300
                     rounded
-                    " style={{...(selectedCrypto===crypto?.name?{backgroundColor: "#F3F4F6", color: "black"}:{})}} onClick={() => setSelectedCrypto(crypto?.name)}>
-                            <img src="https://i.picsum.photos/id/315/50/20"/>
+                    " style={{...(selectedCrypto?.name===crypto?.name?{backgroundColor: "#F3F4F6", color: "black"}:{})}} onClick={() => setSelectedCrypto(crypto)}>
+                            <img src="https://i.picsum.photos/id/315/50/20" style={{height: "2rem", objectFit: "cover"}} alt="cryptoIcon" />
                             <p>{crypto?.name}</p>
                         </button>
                     )
 
                 }
+                return null
             })
             }
 

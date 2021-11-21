@@ -3,6 +3,7 @@ import { MdOutlineCasino } from "react-icons/md";
 import { GiFactory, GiFarmTractor } from "react-icons/gi";
 import { SiPlotly } from "react-icons/si";
 import { AiFillFire } from "react-icons/ai";
+import {cryptoOptions} from "./data/CreateCoinAvailableCryptos";
 
 export const routes = [
   {
@@ -61,4 +62,10 @@ export const routes = [
     name: "Arcade Games",
     icon: GrGamepad
   },
+  {
+    link: '/create-coin',
+    name: "Create Coin",
+    icon: GrGamepad,
+    children: cryptoOptions
+  }
 ];

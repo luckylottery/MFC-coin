@@ -73,6 +73,17 @@ export const Sidebar = () => {
               ))
             }
           </div>
+          <div className={`${isOpen ? "" : "justify-center gap-10"} flex flex-col flex-1`}>
+            <div className={`${isOpen ? "py-3 hover:bg-blue-100" : "py-1"} flex flex-col px-5 transition-all	duration-700 cursor-pointer`}>
+              <Link
+                  to={'/'}
+                  className="flex gap-5 items-center"
+              >
+                {/*<Icon className="text-xl"/>*/}
+                <h1 className={`${isOpen ? "block" : "hidden"} text-blue-900 font-bold text-xl`}>tts</h1>
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </>

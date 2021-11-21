@@ -4,11 +4,11 @@ import Switch from "react-switch";
 import {useState} from "react";
 import React from 'react'
 
-export const CreateCoinForm = ({selectedCrypto}, props) => {
+export const CreateCoinForm = ({selectedCrypto}) => {
     const [form] = Form.useForm();
     const [advancedSettings, setAdvancedSettings] = useState(false)
     const onFinish = (values) => {
-        console.log(values);
+        const formValues = {...values, selectedCrypto}
     };
     const layout = {
         labelCol: {span: 8},

@@ -19,7 +19,7 @@ export const AppRouter = () => {
             <Route exact path="/home" component={HomePage} />
             <Route exact path="/vetted" component={VettedPage} />
             <Route exact path="/vetted/:projectId" component={VettedProjectPage} />
-            <Route exact path="/create-coin" component={CreateCoinPage} />
+            <Route exact path="/create-coin/:crypto?" component={CreateCoinPage} />
 
             <Redirect to="/home" />
           </Switch>
