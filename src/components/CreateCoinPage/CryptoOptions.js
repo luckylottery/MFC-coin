@@ -58,7 +58,8 @@ export const CryptoOptions = ({selectedCrypto, setSelectedCrypto, routeId }) => 
                     border-2 border-gray-200
                     py-1 pl-2 md:pl-4 md:py-2 md:mx-4
                     break-words
-                    min-w-max
+                    min-w-min
+                    break-all
                     text-gray-100
                     hover:bg-gray-100
                     hover:text-gray-900

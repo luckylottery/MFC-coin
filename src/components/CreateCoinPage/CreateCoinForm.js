@@ -9,6 +9,7 @@ export const CreateCoinForm = ({selectedCrypto}) => {
     const [advancedSettings, setAdvancedSettings] = useState(false)
     const onFinish = (values) => {
         const formValues = {...values, selectedCrypto}
+        console.log(formValues)
     };
     const layout = {
         labelCol: {span: 8},
