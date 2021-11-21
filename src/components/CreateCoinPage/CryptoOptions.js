@@ -58,14 +58,14 @@ export const CryptoOptions = ({selectedCrypto, setSelectedCrypto, routeId }) => 
                     border-2 border-gray-200
                     py-1 pl-2 md:pl-4 md:py-2 md:mx-4
                     break-words
-                    min-w-min
+                    min-w-max
                     text-gray-100
                     hover:bg-gray-100
                     hover:text-gray-900
                     duration-300
                     rounded
                     " style={{...(selectedCrypto?.name===crypto?.name?{backgroundColor: "#F3F4F6", color: "black"}:{})}} onClick={() => setSelectedCrypto(crypto)}>
-                            <img src="https://i.picsum.photos/id/315/50/20" style={{height: "2rem", objectFit: "cover"}} alt="cryptoIcon" />
+                            <img src={crypto?.icon} style={{height: "20px", objectFit: "cover"}} alt={"Icon"} className="mr-1"/>
                             <p>{crypto?.name}</p>
                         </button>
                     )
