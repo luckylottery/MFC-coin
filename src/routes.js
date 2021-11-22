@@ -63,7 +63,7 @@ export const routes = [
     icon: GrGamepad
   },
   {
-    link: '/create-coin',
+    collapsable: true,
     name: "Create Coin",
     icon: GrGamepad,
     children: cryptoOptions
