@@ -29,7 +29,7 @@ export const Drawer = () => {
               </button>
             </div>
             <nav className="flex flex-col text-2xl">
-              {
+              {/* {
                 routes.map(({ link, name, children, icon: Icon }) => (
                   <div
                     key={`${link}_drawer`}
@@ -59,7 +59,7 @@ export const Drawer = () => {
                     </div>
                   </div>
                 ))
-              }
+              } */}
             </nav>
           </div>
         </div>
