@@ -32,7 +32,7 @@ export const Sidebar = () => {
       <div
         className={`hidden lg:flex lg:fixed flex-col items-center relative bg-blue-4 shadow-lg h-screen transition-all z-50 ${isOpen ? "lg:w-3/12 xl:w-2/12" : "w-16"}`}>
         <div
-          className={`${isOpen ? "block" : "hidden"} absolute -right-11 top-10 p-2.5 rounded cursor-pointer`}
+          className={`${isOpen ? "block" : "hidden"} absolute -right-11 top-40 p-2.5 rounded cursor-pointer`}
           onClick={toggleState}
         >
           <div
