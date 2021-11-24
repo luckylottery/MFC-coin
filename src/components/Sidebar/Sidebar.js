@@ -5,6 +5,8 @@ import { Image } from "../Image/Image";
 import { routes } from "../../routes";
 
 const burgerMenuIcon = require('../../assets/Icons/Burger Menu.png').default;
+const MCFIcon = require('../../assets/Icons/LOGO MF_ICON.png').default;
+const MCFIconText = require('../../assets/Icons/Memefactory Logo L.png').default;
 
 export const Sidebar = () => {
 
@@ -45,13 +47,23 @@ export const Sidebar = () => {
         <div className="pt-5 h-full w-full flex justify-center w-full flex-col gap-10">
           {
             isOpen ? (
-              <Image
-                src="/assets/Logo Square BG White-01.png"
-                className="self-center rounded-full h-16 w-16 lg:h-20 xl:w-24 xl:h-24"
-              />
+              <div className="self-center items-center flex flex-col gap-3">
+                <div
+                  className="h-20 w-20 bg-no-repeat bg-contain bg-center"
+                  style={{ backgroundImage: `url("${MCFIcon}")` }}
+                />
+                <div
+                  className="h-20 w-40 bg-no-repeat bg-contain bg-center"
+                  style={{ backgroundImage: `url("${MCFIconText}")` }}
+                />
+              </div>
+              // <Image
+              //   src="/assets/Logo Square BG White-01.png"
+              //   className="self-center rounded-full h-16 w-16 lg:h-20 xl:w-24 xl:h-24"
+              // />
             ) : (
               <div
-                className="cursor-pointer mx-auto h-10 w-10 bg-no-repeat bg-contain bg-center"
+                className="cursor-pointer self-center h-10 w-10 bg-no-repeat bg-contain bg-center"
                 style={{
                   backgroundImage: `url("${burgerMenuIcon}")`
                 }}
