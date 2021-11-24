@@ -1,7 +1,5 @@
 import { useRef, useState } from "react"
 import { Link } from 'react-router-dom';
-import { GrMenu } from "react-icons/gr";
-import { Image } from "../Image/Image";
 import { routes } from "../../routes";
 
 const burgerMenuIcon = require('../../assets/Icons/Burger Menu.png').default;
@@ -57,10 +55,6 @@ export const Sidebar = () => {
                   style={{ backgroundImage: `url("${MCFIconText}")` }}
                 />
               </div>
-              // <Image
-              //   src="/assets/Logo Square BG White-01.png"
-              //   className="self-center rounded-full h-16 w-16 lg:h-20 xl:w-24 xl:h-24"
-              // />
             ) : (
               <div
                 className="cursor-pointer self-center h-10 w-10 bg-no-repeat bg-contain bg-center"

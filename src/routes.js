@@ -10,7 +10,6 @@ export const routes = [
     icon: require("./assets/Icons/Factory.png").default,
   },
   {
-    link: "/launchpad",
     name: "Launchpad",
     icon: require("./assets/Icons/Launchpad.png").default,
     collapsable: true,
