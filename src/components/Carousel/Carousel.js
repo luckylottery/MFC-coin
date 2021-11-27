@@ -23,10 +23,10 @@ const responsive = {
 
 export const Carousel = () => {
   return (
-    <div className="overflow-hidden mx-auto my-10 bg-pink h-72 w-full md:w-11/12 text-center">
+    <div className="overflow-hidden mx-auto my-10 h-72 w-full md:w-11/12 text-center">
       <RMCarousel
         responsive={responsive}
-        // autoPlay={true}
+        autoPlay={true}
         arrows={true}
         infinite={true}
         className="rounded z-0 overflow-visible"
