@@ -1,6 +1,5 @@
 import { Drawer } from "../Drawer/Drawer";
 import { Button } from "../Button/Button";
-import { Image } from "../Image/Image";
 
 const MCFIcon = require('../../assets/Icons/LOGO MF_ICON.png').default;
 const Avatar = require('../../assets/Icons/Avatar.png').default;

@@ -5,6 +5,7 @@ import { routes } from "../../routes";
 const burgerMenuIcon = require('../../assets/Icons/Burger Menu.png').default;
 const MCFIcon = require('../../assets/Icons/LOGO MF_ICON.png').default;
 const MCFIconText = require('../../assets/Icons/Memefactory Logo L.png').default;
+const Arrow = require('../../assets/Icons/Arrow down.png').default;
 
 export const Sidebar = () => {
 
@@ -98,6 +99,12 @@ export const Sidebar = () => {
                           }}
                         />
                         <h1 className={`${isOpen ? "block" : "hidden"} text-xl`}>{name}</h1>
+                        <div
+                          className={`${isOpen ? "block" : "hidden"} transform rotate-180 h-2.5 w-2.5 bg-no-repeat bg-center bg-contain`}
+                          style={{
+                            backgroundImage: `url("${Arrow}")`
+                          }}
+                        />
                       </div>
                     )}
                   {
