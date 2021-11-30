@@ -3,17 +3,65 @@ import { FaDiscord } from "react-icons/fa"
 import { Image } from "../Image/Image"
 
 const belt = require('../../assets/images/Belt.png').default;
+const blueBlox = require('../../assets/images/boxes/box blue.png').default;
+const originalBox = require('../../assets/images/boxes/box original.png').default;
+const redBox = require('../../assets/images/boxes/box red.png').default;
+const yellowBox = require('../../assets/images/boxes/box yellow.png').default;
+const greenBox = require('../../assets/images/boxes/box green.png').default;
 
 export const Footer = () => {
   return (
     <footer className="w-full bg-blue-3 box-content text-white mt-10">
       <div
-        className="relative w-full h-7 bg-contain"
+        className="relative w-full h-7 bg-contain bg-no-repeat"
         style={{
           backgroundImage: `url("${belt}")`
         }}
       >
-        
+        <div className="absolute w-full flex justify-evenly -top-10">
+          <div
+            className="w-10 h-10 bg-cover rounded-t"
+            style={{
+              backgroundImage: `url("${redBox}")`
+            }}
+          />
+          <div
+            className="w-10 h-10 bg-cover rounded-t"
+            style={{
+              backgroundImage: `url("${blueBlox}")`
+            }}
+          />
+          <div
+            className="w-10 h-10 bg-cover rounded-t"
+            style={{
+              backgroundImage: `url("${originalBox}")`
+            }}
+          />
+          <div
+            className="w-10 h-10 bg-cover rounded-t"
+            style={{
+              backgroundImage: `url("${yellowBox}")`
+            }}
+          />
+          <div
+            className="w-10 h-10 bg-cover rounded-t"
+            style={{
+              backgroundImage: `url("${greenBox}")`
+            }}
+          />
+          <div
+            className="w-10 h-10 bg-cover rounded-t hidden sm:block"
+            style={{
+              backgroundImage: `url("${redBox}")`
+            }}
+          />
+          <div
+            className="w-10 h-10 bg-cover rounded-t hidden sm:block"
+            style={{
+              backgroundImage: `url("${yellowBox}")`
+            }}
+          />
+        </div>
       </div>
       <div className="flex flex-col sm:flex-row gap-10 p-10">
         <div>
