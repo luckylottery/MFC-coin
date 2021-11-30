@@ -100,7 +100,7 @@ export const HomePage = () => {
                 </div>
               </div>
             </div>
-            <div className="">
+            <div>
               <h1 className="text-center mb-5 text-blue-2">Featured on</h1>
               <div className="flex gap-5 flex-wrap justify-center">
                 <div className="h-10 w-40 bg-center bg-contain bg-no-repeat"

@@ -2,9 +2,19 @@ import { AiFillFacebook, AiFillTwitterSquare, AiOutlineInstagram } from "react-i
 import { FaDiscord } from "react-icons/fa"
 import { Image } from "../Image/Image"
 
+const belt = require('../../assets/images/Belt.png').default;
+
 export const Footer = () => {
   return (
-    <footer className="w-full bg-purple-900 box-content text-white">
+    <footer className="w-full bg-blue-3 box-content text-white mt-10">
+      <div
+        className="relative w-full h-7 bg-contain"
+        style={{
+          backgroundImage: `url("${belt}")`
+        }}
+      >
+        
+      </div>
       <div className="flex flex-col sm:flex-row gap-10 p-10">
         <div>
           <Image
