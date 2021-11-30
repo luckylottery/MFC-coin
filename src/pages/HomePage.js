@@ -2,6 +2,7 @@ import "react-multi-carousel/lib/styles.css";
 import { Carousel } from "../components/Carousel/Carousel";
 
 const pattern = require('../assets/patterns/Pattern.png').default;
+const weeklyPrize = require('../assets/images/weeklyprize.png').default;
 const launchpad = require('../assets/images/Launchpad_Rocket.png').default;
 const scratchies = require('../assets/images/Scratchies Coupon.png').default;
 const createAndManage = require('../assets/images/Control.png').default;
@@ -21,118 +22,125 @@ export const HomePage = () => {
   return (
     <div className="box-border">
       <Carousel />
-        <div
-          className="w-full py-10 bg-cover pg-no-repeat"
-          style={{
-            backgroundImage: `url("${pattern}")`
-          }}
-        >
-          <div className="flex flex-col gap-10 w-11/12 md:w-7/12 xl:w-10/12 mx-auto font-bold">
-            <div className="flex flex-col xl:flex-row justify-center gap-10">
-              <div className="flex w-full gap-5 justify-center items-center bg-white py-5 px-10 border-2 border-blue-4 rounded-3xl">
-                <label className="text-blue-1">Launchpad</label>
-                <div className="h-60 w-72 bg-center bg-contain bg-no-repeat"
-                  style={{
-                    backgroundImage: `url("${launchpad}")`
-                  }}
-                />
-              </div>
-              <div className="w-full flex gap-5 justify-center items-center bg-white py-5 px-10 border-2 border-blue-4 rounded-3xl">
-                <label className="text-blue-1">Scratchies</label>
-                <div className="h-60 w-72 bg-center bg-contain bg-no-repeat"
-                  style={{
-                    backgroundImage: `url("${scratchies}")`
-                  }}
-                />
-              </div>
-            </div>
-            <div className="flex flex-col xl:flex-row items-center gap-10">
-              <div className="flex w-full xl:w-1/2 flex-col gap-10">
-                <div className="flex gap-5 justify-center items-center bg-white py-5 px-10 border-2 border-blue-4 rounded-3xl">
-                  <label className="text-blue-1">Create & Manage</label>
-                  <div className="h-48 w-full xl:w-72 bg-center bg-contain bg-no-repeat"
-                    style={{
-                      backgroundImage: `url("${createAndManage}")`
-                    }}
-                  />
-                </div>
-                <div className="flex gap-5 justify-center items-center bg-white py-5 px-10 border-2 border-blue-4 rounded-3xl">
-                  <label className="text-blue-1">Coin Creation</label>
-                  <div className="h-48 w-full xl:w-72 bg-center bg-contain bg-no-repeat"
-                    style={{
-                      backgroundImage: `url("${coinCreation}")`
-                    }}
-                  />
-                </div>
-              </div>
-              <div className="w-full h-48 xl:h-96 xl:w-1/2 bg-center bg-contain bg-no-repeat"
+      <div
+        className="relative w-full h-96 mb-10 bg-center bg-contain bg-no-repeat mx-auto"
+        style={{
+          backgroundImage: `url("${weeklyPrize}")`
+        }}
+      >
+      </div>
+      <div
+        className="w-full py-10 bg-cover pg-no-repeat"
+        style={{
+          backgroundImage: `url("${pattern}")`
+        }}
+      >
+        <div className="flex flex-col gap-10 w-11/12 md:w-7/12 xl:w-10/12 mx-auto font-bold">
+          <div className="flex flex-col xl:flex-row justify-center gap-10">
+            <div className="flex w-full gap-5 justify-center items-center bg-white py-5 px-10 border-2 border-blue-4 rounded-3xl">
+              <label className="text-blue-1">Launchpad</label>
+              <div className="h-60 w-72 bg-center bg-contain bg-no-repeat"
                 style={{
-                  backgroundImage: `url("${coinMakerRobot}")`
+                  backgroundImage: `url("${launchpad}")`
                 }}
               />
             </div>
-            <div className="mx-auto w-full">
-              <h1 className="text-center text-blue-1 text-4xl">Arcade</h1>
-              <div className="flex justify-center gap-10 flex-wrap mt-10 text-white">
-                <div className="cursor-pointer transition duration-300 border border-pink relative h-40 w-72 bg-center bg-contain bg-no-repeat rounded-3xl overflow-hidden transform hover:scale-105"
+            <div className="w-full flex gap-5 justify-center items-center bg-white py-5 px-10 border-2 border-blue-4 rounded-3xl">
+              <label className="text-blue-1">Scratchies</label>
+              <div className="h-60 w-72 bg-center bg-contain bg-no-repeat"
+                style={{
+                  backgroundImage: `url("${scratchies}")`
+                }}
+              />
+            </div>
+          </div>
+          <div className="flex flex-col xl:flex-row items-center gap-10">
+            <div className="flex w-full xl:w-1/2 flex-col gap-10">
+              <div className="flex gap-5 justify-center items-center bg-white py-5 px-10 border-2 border-blue-4 rounded-3xl">
+                <label className="text-blue-1">Create & Manage</label>
+                <div className="h-48 w-full xl:w-72 bg-center bg-contain bg-no-repeat"
                   style={{
-                    backgroundImage: `url("${flappyDevs}")`
+                    backgroundImage: `url("${createAndManage}")`
                   }}
-                >
-                  <div className="z-10 absolute bottom-0 w-full h-12 blur transition duration-300 rounded-3xl bg-blue-3" />
-                  <label className="z-20 absolute bottom-2.5 text-center w-full">Flappy Devs</label>
-                </div>
-                <div className="cursor-pointer transition duration-300 border border-pink relative h-40 w-72 bg-center bg-contain bg-no-repeat rounded-3xl overflow-hidden transform hover:scale-105"
+                />
+              </div>
+              <div className="flex gap-5 justify-center items-center bg-white py-5 px-10 border-2 border-blue-4 rounded-3xl">
+                <label className="text-blue-1">Coin Creation</label>
+                <div className="h-48 w-full xl:w-72 bg-center bg-contain bg-no-repeat"
                   style={{
-                    backgroundImage: `url("${kekman}")`
+                    backgroundImage: `url("${coinCreation}")`
                   }}
-                >
-                  <div className="z-10 absolute bottom-0 w-full h-12 blur transition duration-300 rounded-3xl bg-blue-3" />
-                  <label className="z-20 absolute bottom-2.5 text-center w-full">Kekman</label>
-                </div>
-                <div className="cursor-pointer transition duration-300 border border-pink relative h-40 w-72 bg-center bg-contain bg-no-repeat rounded-3xl overflow-hidden transform hover:scale-105"
-                  style={{
-                    backgroundImage: `url("${spaceInvaders}")`
-                  }}
-                >
-                  <div className="z-10 absolute bottom-0 w-full h-12 blur transition duration-300 rounded-3xl bg-blue-3" />
-                  <label className="z-20 absolute bottom-2.5 text-center w-full">Personal Space Invaders</label>
-                </div>
+                />
               </div>
             </div>
-            <div>
-              <h1 className="text-center mb-5 text-blue-2">Featured on</h1>
-              <div className="flex gap-5 flex-wrap justify-center">
-                <div className="h-10 w-40 bg-center bg-contain bg-no-repeat"
-                  style={{
-                    backgroundImage: `url("${coinGecko}")`
-                  }}
-                />
-                <div className="h-10 w-40 bg-center bg-contain bg-no-repeat"
-                  style={{
-                    backgroundImage: `url("${coinMarketCap}")`
-                  }}
-                />
-                <div className="h-10 w-40 bg-center bg-contain bg-no-repeat"
-                  style={{
-                    backgroundImage: `url("${nomics}")`
-                  }}
-                />
-                <div className="h-10 w-40 bg-center bg-contain bg-no-repeat"
-                  style={{
-                    backgroundImage: `url("${crypto}")`
-                  }}
-                />
-                <div className="h-10 w-40 bg-center bg-contain bg-no-repeat"
-                  style={{
-                    backgroundImage: `url("${coinbase}")`
-                  }}
-                />
+            <div className="w-full h-48 xl:h-96 xl:w-1/2 bg-center bg-contain bg-no-repeat"
+              style={{
+                backgroundImage: `url("${coinMakerRobot}")`
+              }}
+            />
+          </div>
+          <div className="mx-auto w-full">
+            <h1 className="text-center text-blue-1 text-4xl">Arcade</h1>
+            <div className="flex justify-center gap-10 flex-wrap mt-10 text-white">
+              <div className="cursor-pointer transition duration-300 border border-pink relative h-40 w-72 bg-center bg-contain bg-no-repeat rounded-3xl overflow-hidden transform hover:scale-105"
+                style={{
+                  backgroundImage: `url("${flappyDevs}")`
+                }}
+              >
+                <div className="z-10 absolute bottom-0 w-full h-12 blur transition duration-300 rounded-3xl bg-blue-3" />
+                <label className="z-20 absolute bottom-2.5 text-center w-full">Flappy Devs</label>
+              </div>
+              <div className="cursor-pointer transition duration-300 border border-pink relative h-40 w-72 bg-center bg-contain bg-no-repeat rounded-3xl overflow-hidden transform hover:scale-105"
+                style={{
+                  backgroundImage: `url("${kekman}")`
+                }}
+              >
+                <div className="z-10 absolute bottom-0 w-full h-12 blur transition duration-300 rounded-3xl bg-blue-3" />
+                <label className="z-20 absolute bottom-2.5 text-center w-full">Kekman</label>
+              </div>
+              <div className="cursor-pointer transition duration-300 border border-pink relative h-40 w-72 bg-center bg-contain bg-no-repeat rounded-3xl overflow-hidden transform hover:scale-105"
+                style={{
+                  backgroundImage: `url("${spaceInvaders}")`
+                }}
+              >
+                <div className="z-10 absolute bottom-0 w-full h-12 blur transition duration-300 rounded-3xl bg-blue-3" />
+                <label className="z-20 absolute bottom-2.5 text-center w-full">Personal Space Invaders</label>
               </div>
             </div>
           </div>
+          <div>
+            <h1 className="text-center mb-5 text-blue-2">Featured on</h1>
+            <div className="flex gap-5 flex-wrap justify-center">
+              <div className="h-10 w-40 bg-center bg-contain bg-no-repeat"
+                style={{
+                  backgroundImage: `url("${coinGecko}")`
+                }}
+              />
+              <div className="h-10 w-40 bg-center bg-contain bg-no-repeat"
+                style={{
+                  backgroundImage: `url("${coinMarketCap}")`
+                }}
+              />
+              <div className="h-10 w-40 bg-center bg-contain bg-no-repeat"
+                style={{
+                  backgroundImage: `url("${nomics}")`
+                }}
+              />
+              <div className="h-10 w-40 bg-center bg-contain bg-no-repeat"
+                style={{
+                  backgroundImage: `url("${crypto}")`
+                }}
+              />
+              <div className="h-10 w-40 bg-center bg-contain bg-no-repeat"
+                style={{
+                  backgroundImage: `url("${coinbase}")`
+                }}
+              />
+            </div>
+          </div>
         </div>
-      
+      </div>
+
     </div>
   )
 }
