@@ -1,33 +1,70 @@
 import "react-multi-carousel/lib/styles.css";
 import { Carousel } from "../components/Carousel/Carousel";
-import { Image } from "../components/Image/Image";
+
+const pattern = require('../assets/patterns/Pattern.png').default;
+const launchpad = require('../assets/images/Launchpad_Rocket.png').default;
+const scratchies = require('../assets/images/Scratchies Coupon.png').default;
+const createAndManage = require('../assets/images/Control.png').default;
+const coinCreation = require('../assets/images/Coin machine.png').default;
+const coinMakerRobot = require('../assets/images/Coon Maker Robot.png').default;
 
 export const HomePage = () => {
   return (
     <div className="box-border">
       <Carousel />
-      <main className="grid md:grid-cols-2 mx-auto w-11/12 gap-10 mb-10">
-        <Image
-          src="https://st.depositphotos.com/1006318/51653/v/600/depositphotos_516539424-stock-illustration-industrial-factory-bitcoin-mining-conveyor.jpg"
-          className="h-60 rounded"
-        />
-        <Image
-          src="https://public.bnbstatic.com/image/cms/blog/20210708/4386c9d0-6857-48c2-a502-01998860922f.png"
-          className="h-60 rounded"
-        />
-        <Image
-          src="https://cdn.statically.io/img/learn2.trade/f=auto%2Cq=10/wp-content/uploads/2020/02/4051b3e06c53d1bbaec47213c5a1ba23741d7195f5542d7b8a2460c2f84c6a07.jpeg"
-          className="h-60 rounded"
-        />
-        <Image
-          src="https://www.nerdynaut.com/wp-content/uploads/2021/03/Crypto-Casinos-on-the-Rise-With-3x-in-2020-950x500.png"
-          className="h-60 rounded"
-        />
-        <Image
-          src="https://media.coolwallet.io/wp-content/uploads/2021/02/staking-2.png"
-          className="h-60 rounded"
-        />
-      </main>
+      <div className="relative h-11/12">
+        <img src={pattern} className="pattern-1 w-full max-w-full" alt="pattern"/>
+        <div className="absolute top-10 left-1/2 transform -translate-x-1/2 w-full">
+          <div>
+            <div className="flex flex-col gap-10 w-10/12 mx-auto font-bold">
+              <div className="flex justify-center gap-10">
+                <div className="flex w-full gap-5 justify-center items-center bg-white py-5 px-10 border-2 border-blue-4 rounded-3xl">
+                  <label className="text-blue-1">Launchpad</label>
+                  <div className="h-60 w-72 bg-center bg-contain bg-no-repeat"
+                    style={{
+                      backgroundImage: `url("${launchpad}")`
+                    }}
+                  />
+                </div>
+                <div className="w-full flex gap-5 justify-center items-center bg-white py-5 px-10 border-2 border-blue-4 rounded-3xl">
+                  <label className="text-blue-1">Scratchies</label>
+                  <div className="h-60 w-72 bg-center bg-contain bg-no-repeat"
+                    style={{
+                      backgroundImage: `url("${scratchies}")`
+                    }}
+                  />
+                </div>
+              </div>
+              <div className="flex gap-10">
+                <div className="flex w-1/2 flex-col gap-10">
+                  <div className="flex gap-5 justify-center items-center bg-white py-5 px-10 border-2 border-blue-4 rounded-3xl">
+                    <label className="text-blue-1">Create & Manage</label>
+                    <div className="h-48 w-72 bg-center bg-contain bg-no-repeat"
+                      style={{
+                        backgroundImage: `url("${createAndManage}")`
+                      }}
+                    />
+                  </div>
+                  <div className="flex gap-5 justify-center items-center bg-white py-5 px-10 border-2 border-blue-4 rounded-3xl">
+                    <label className="text-blue-1">Coin Creation</label>
+                    <div className="h-48 w-72 bg-center bg-contain bg-no-repeat"
+                      style={{
+                        backgroundImage: `url("${coinCreation}")`
+                      }}
+                    />
+                  </div>
+                </div>
+                <div className="w-1/2 bg-center bg-contain bg-no-repeat"
+                  style={{
+                    backgroundImage: `url("${coinMakerRobot}")`
+                  }}
+                />
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
