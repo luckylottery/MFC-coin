@@ -4,6 +4,7 @@ import { routes } from "../../routes";
 
 const burgerMenuIcon = require('../../assets/Icons/Burger Menu.png').default;
 const MCFIcon = require('../../assets/Icons/LOGO MF_ICON.png').default;
+const MCFFrontIcon = require('../../assets/Icons/coin frontface.png').default;
 
 export const Drawer = () => {
 
@@ -88,6 +89,22 @@ export const Drawer = () => {
                 ))
               }
             </nav>
+            <div className="px-5 my-10 text-blue-1 font-bold">
+              <div className="bg-blue-1 w-full h-1 rounded mb-5" />
+              <div className="flex items-center justify-center gap-5 mb-3">
+                <div
+                  className="h-9 w-9 bg-no-repeat bg-center bg-contain"
+                  style={{
+                    backgroundImage: `url("${MCFFrontIcon}")`
+                  }}
+                />
+                <label>$0,00034</label>
+              </div>
+              <div className="flex justify-center gap-5">
+                <h3>Poocoin</h3>
+                <h3>Dextools</h3>
+              </div>
+            </div>
           </div>
         </div>
       </div>
