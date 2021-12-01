@@ -1,71 +1,51 @@
-import { GrGamepad, GrHomeRounded, GrLaunch } from "react-icons/gr";
-import { MdOutlineCasino } from "react-icons/md";
-import { GiFactory, GiFarmTractor } from "react-icons/gi";
-import { SiPlotly } from "react-icons/si";
-import { AiFillFire } from "react-icons/ai";
-import {cryptoOptions} from "./data/CreateCoinAvailableCryptos";
-
 export const routes = [
   {
     link: "/home",
     name: "Home",
-    icon: GrHomeRounded,
+    icon: require("./assets/Icons/Home.png").default,
   },
   {
     link: "/factory",
     name: "Factory",
-    icon: GiFactory,
+    icon: require("./assets/Icons/Factory.png").default,
   },
   {
-    link: "/vetted",
-    name: "IDOs",
-    icon: AiFillFire,
-    children: [
-      {
-        link: "/vetted",
-        name: "Vetted Projects",
-      },
-    ]
-  },
-  {
-    link: "/launchpad",
     name: "Launchpad",
-    icon: GrLaunch,
+    icon: require("./assets/Icons/Launchpad.png").default,
+    collapsable: true,
     children: [
       {
         link: "/dashboard",
         name: "Dashboard",
       },
       {
-        link: "/manage",
+        link: "/create-manage",
         name: "Create & Manage",
-      }
+      },
+      {
+        link: "/coin-creation",
+        name: "Coin Creation",
+      },
     ]
   },
   {
     link: "/lottery",
     name: "Lottery",
-    icon: SiPlotly,
+    icon: require("./assets/Icons/Lottery.png").default,
   },
   {
     link: "/casino",
     name: "Casino",
-    icon: MdOutlineCasino,
+    icon: require("./assets/Icons/Casino.png").default,
   },
   {
-    link: "/staking",
-    name: "Staking/Farming",
-    icon: GiFarmTractor
+    link: "/farming",
+    name: "Farming",
+    icon: require("./assets/Icons/Claw.png").default,
   },
   {
     link: "/arcade",
-    name: "Arcade Games",
-    icon: GrGamepad
+    name: "Arcade",
+    icon: require("./assets/Icons/Arcade.png").default,
   },
-  {
-    collapsable: true,
-    name: "Create Coin",
-    icon: GrGamepad,
-    children: cryptoOptions
-  }
-];
+]
