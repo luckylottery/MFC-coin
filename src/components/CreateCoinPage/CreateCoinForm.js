@@ -19,7 +19,7 @@ export const CreateCoinForm = ({selectedCrypto}) => {
     return (
         <Form {...layout} form={form} name="control-hooks" onFinish={onFinish}>
             <Form.Item name="tokenName"
-                       label={<label className="font-bold"><span className="text-red-700 self-center">*</span>Token Name</label>}
+                       label={<label className="font-bold">Token Name</label>}
                        className="grid grid-cols-1 sm:grid-cols-formItem p-4 text-blue-2"
                        rules={[{
                            required: true,
@@ -32,7 +32,7 @@ export const CreateCoinForm = ({selectedCrypto}) => {
                     className="w-full col-start-2 col-end-5 p-0.5 rounded focus:outline-none"/>
             </Form.Item>
             <Form.Item name="Symbol"
-                       label={<label className="font-bold"><span className="text-red-700">*</span>Symbol</label>}
+                       label={<label className="font-bold">Symbol</label>}
                        className="grid grid-cols-1 sm:grid-cols-formItem p-4 text-blue-2"
                        rules={[{
                            required: true,
@@ -43,7 +43,7 @@ export const CreateCoinForm = ({selectedCrypto}) => {
                        }]}>
                 <Input className="w-full p-0.5 rounded focus:outline-none"/>
             </Form.Item>
-            <Form.Item name="initialSupply" label={<label className="font-bold"><span className="text-red-700">*</span>Initial
+            <Form.Item name="initialSupply" label={<label className="font-bold">Initial
                 Supply</label>} className="grid grid-cols-1 sm:grid-cols-formItem p-4 text-blue-2"
                        rules={[{
                            required: true,
@@ -56,7 +56,7 @@ export const CreateCoinForm = ({selectedCrypto}) => {
             </Form.Item>
 
             <Form.Item name="decimals"
-                       label={<label className="font-bold"><span className="text-red-700">*</span>Decimals <span
+                       label={<label className="font-bold">Decimals <span
                            className="text-xs whitespace-nowrap">(1-18)</span></label>}
                        className="grid grid-cols-1 sm:grid-cols-formItem p-4 break-words text-blue-2"
                        rules={[{

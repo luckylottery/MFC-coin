@@ -27,7 +27,8 @@ module.exports = {
     borderRadius: {
       'coin-form': '40px',
       'coin-form-border': '42px',
-      'none': '0px'
+      'none': '0px',
+      'sm': '5px'
     },
     boxShadow: {
       'coin-form-shadow': '3px 2px 5px 1px #E5E7EB;'
