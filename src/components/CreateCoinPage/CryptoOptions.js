@@ -45,15 +45,15 @@ export const CryptoOptions = ({selectedCrypto, setSelectedCrypto, routeId }) => 
                             className="w-11/12
                     justify-center sm:justify-start
                     flex items-center
-                    border-2 border-blue-primary
+                    border-2 border-blue-1
                     py-1 pl-2 md:pl-4 md:py-2 md:mx-4
                     break-words
                     min-w-min
                     break-all
-                    text-blue-primary
+                    text-blue-1
                     bg-blue-light
                     hover:bg-gray-100
-                    hover:text-blue-secondary
+                    hover:text-blue-2
                     duration-300
                     rounded
                     " style={{borderBottom: "4px solid #405cd0", borderRadius: "15px",  ...(selectedCrypto?.name===crypto?.name?{backgroundColor: "#afbeff", color: "black"}:{})}} onClick={() => setSelectedCrypto(crypto)}>
@@ -68,10 +68,10 @@ export const CryptoOptions = ({selectedCrypto, setSelectedCrypto, routeId }) => 
             }
             <div className="xl:col-start-2 xl:col-end-3 justify-self-end w-11/12 flex justify-end">
                 <button
-                    className="m-1 px-2 rounded text-white bg-blue-primary hover:bg-blue-primary duration-300 font-bold"
+                    className="m-1 px-2 rounded text-white bg-blue-1 hover:bg-blue-1 duration-300 font-bold"
                     onClick={() => setPage(PREVIOUS_PAGE)}>{"<"}</button>
                 <button
-                    className="m-1 px-2 rounded text-white bg-blue-primary hover:bg-blue-primary duration-300 font-bold"
+                    className="m-1 px-2 rounded text-white bg-blue-1 hover:bg-blue-1 duration-300 font-bold"
                     onClick={() => setPage(NEXT_PAGE)}>>
                 </button>
             </div>
