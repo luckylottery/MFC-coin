@@ -1,63 +1,77 @@
+import Arbitrum from '../images/Arbitrum.svg'
+import ETH from '../images/Eth.png'
+import BSC from '../images/binance.png'
+import HECCO from '../images/Hecco.jpg'
+import Avalanche from '../images/avalanche.png'
+import xDAI from '../images/xdai.png'
+import Celo from '../images/celo.png'
+import Moonriver from '../images/Moonriver.png'
+import Warbots from '../images/Warbots Logo.jpg'
+import Polygon from '../images/polygon.png'
+import HeccoChain from '../images/hecochain.svg'
+import Fantom from '../images/fantom.png'
+
+
 export const cryptoOptions = [
     {
         name: 'ETH',
-        icon: 'https://i.picsum.photos/id/334/16/16.jpg?hmac=7oTLTcoMrhTcClbd7aOBey-1Xls9geAxhMDjvJ_CULY',
+        icon: ETH,
         url: "https://",
         default: true,
         link: '/create-coin/ETH'
     }, {
         name: 'Arbitrum',
-        icon: 'https://i.picsum.photos/id/334/16/16.jpg?hmac=7oTLTcoMrhTcClbd7aOBey-1Xls9geAxhMDjvJ_CULY',
+        icon: Arbitrum,
         url: "https://",
         link: '/create-coin/Arbitrum'
     }, {
         name: 'BSC',
-        icon: 'https://i.picsum.photos/id/334/16/16.jpg?hmac=7oTLTcoMrhTcClbd7aOBey-1Xls9geAxhMDjvJ_CULY',
+        icon: BSC,
         url: "https://",
         link: '/create-coin/BSC'
     }, {
         name: 'HECCO',
-        icon: 'https://i.picsum.photos/id/334/16/16.jpg?hmac=7oTLTcoMrhTcClbd7aOBey-1Xls9geAxhMDjvJ_CULY',
+        icon: HECCO,
         url: "https://",
         link: '/create-coin/HECCO'
     }, {
-        name: 'Fantom',
-        icon: 'https://i.picsum.photos/id/334/16/16.jpg?hmac=7oTLTcoMrhTcClbd7aOBey-1Xls9geAxhMDjvJ_CULY',
+        name: 'Avalanche',
+        icon: Avalanche,
         url: "https://",
         link: '/create-coin/Fantom'
     }, {
-        name: 'Polygon',
-        icon: 'https://i.picsum.photos/id/334/16/16.jpg?hmac=7oTLTcoMrhTcClbd7aOBey-1Xls9geAxhMDjvJ_CULY',
+        name: 'xDAI',
+        icon: xDAI,
         url: "https://",
         link: '/create-coin/Polygon'
     }, {
-        name: 'Avalanche',
-        icon: 'https://i.picsum.photos/id/334/16/16.jpg?hmac=7oTLTcoMrhTcClbd7aOBey-1Xls9geAxhMDjvJ_CULY',
+        name: 'Celo',
+        icon: Celo,
         url: "https://",
         link: '/create-coin/Avalanche'
     }, {
-        name: 'xDAI',
-        icon: 'https://i.picsum.photos/id/334/16/16.jpg?hmac=7oTLTcoMrhTcClbd7aOBey-1Xls9geAxhMDjvJ_CULY',
+        name: 'Moonriver',
+        icon: Moonriver,
         url: "https://",
         link: '/create-coin/xDAI'
     }, {
-        name: 'Celo',
-        icon: 'https://i.picsum.photos/id/334/16/16.jpg?hmac=7oTLTcoMrhTcClbd7aOBey-1Xls9geAxhMDjvJ_CULY',
+        name: 'Warbots',
+        icon: Warbots,
         url: "https://",
         link: '/create-coin/Celo'
     }, {
-        name: 'Moonriver',
-        icon: 'https://i.picsum.photos/id/334/16/16.jpg?hmac=7oTLTcoMrhTcClbd7aOBey-1Xls9geAxhMDjvJ_CULY',
+        name: 'Polygon',
+        icon: Polygon,
         url: "https://",
         link: '/create-coin/Moonriver'
     }, {
-        name: 'pagina2',
-        icon: 'https://i.picsum.photos/id/334/16/16.jpg?hmac=7oTLTcoMrhTcClbd7aOBey-1Xls9geAxhMDjvJ_CULY',
+        name: 'Heco Info',
+        icon: HeccoChain,
         url: "https://",
         link: '/create-coin/pagina2'
     }, {
-        name: 'pagina2 test',
-        icon: 'https://i.picsum.photos/id/334/16/16.jpg?hmac=7oTLTcoMrhTcClbd7aOBey-1Xls9geAxhMDjvJ_CULY',
+        name: 'Fantom',
+        icon: Fantom,
         url: "https://",
         link: '/create-coin/pagina2 test'
     },
