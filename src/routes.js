@@ -53,6 +53,6 @@ export const routes = [
   {
     name: "Create Coin",
     collapsable: true,
-    children: cryptoOptions
+    children: cryptoOptions?.slice(0, 3)
   }
 ]
