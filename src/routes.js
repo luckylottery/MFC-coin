@@ -1,3 +1,5 @@
+import {cryptoOptions} from "./data/CreateCoinAvailableCryptos";
+
 export const routes = [
   {
     link: "/home",
@@ -48,4 +50,9 @@ export const routes = [
     name: "Arcade",
     icon: require("./assets/Icons/Arcade.png").default,
   },
+  {
+    name: "Create Coin",
+    collapsable: true,
+    children: cryptoOptions
+  }
 ]
