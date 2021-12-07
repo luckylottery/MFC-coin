@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import Web3 from "web3";
 //import MCFabi from "../ABI/mcfabi.json";
 //import gameABI from "../ABI/gameAbi.json";
