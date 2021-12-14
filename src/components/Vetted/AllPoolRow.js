@@ -11,7 +11,7 @@ export const AllPoolRow = ({ poolData }) => {
 
   return (
     <tr
-      className="font-bold border-b-2 h-20 border-gray-500 cursor-pointer transition duration-300 hover:bg-gray-700 hover:text-white transform"
+      className="font-bold border-b-2 h-20 border-blue-3 cursor-pointer transition duration-300 hover:bg-blue-3 hover:text-white transform"
       onClick={openVettedProject}
     >
       <td className="px-5 py-2.5">

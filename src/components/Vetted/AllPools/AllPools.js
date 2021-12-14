@@ -6,7 +6,7 @@ export const AllPools = ({ allPools }) => {
       <h1 className="text-3xl my-3 font-bold">All Pools</h1>
       <table className="w-full md:w-11/12 mx-auto">
         <thead>
-          <tr className="text-lg border-b-2 border-gray-500">
+          <tr className="text-lg border-b-2 border-blue-3">
             <th className="p-2 flex-1">Project</th>
             <th className="hidden md:table-cell p-2 w-3/12">Swap Rate</th>
             <th className="p-2 w-3/12">Progress</th>

@@ -20,8 +20,6 @@ export const VettedProjectPage = () => {
     }
   }, [projectId]);
 
-  console.log(vettedProjectData);
-
   return (
     <div>
       <div className="bg-gray-900 text-gray-300 py-5">
