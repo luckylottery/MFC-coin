@@ -7,7 +7,7 @@ export const UpcomingPool = ({ upcomingPoolData }) => {
   return (
     <Link
       to={`/vetted/${projectId}`}
-      className="relative shadow-lg font-bold cursor-pointer bg-indigo-900 rounded-xl w-full p-5 border border-indigo-900 transition duration-300 transform hover:scale-105 hover:border-white"
+      className="relative shadow-lg font-bold cursor-pointer bg-blue-3 rounded-xl w-full p-5 border border-blue-3 transition duration-300 transform hover:scale-105 hover:border-white"
     >
       <div className="flex justify-between items-center">
         <img
@@ -16,7 +16,7 @@ export const UpcomingPool = ({ upcomingPoolData }) => {
           className="h-10 max-w-full"
         />
         <div className="flex gap-2.5">
-          <h5 className="uppercase rounded-full bg-gray-100 px-3 text-gray-700">{chain}</h5>
+          <h5 className="uppercase rounded-full bg-gray-100 px-3 text-white">{chain}</h5>
           <h5 className="rounded-full bg-yellow-300 px-3 text-yellow-900">{status}</h5>
         </div>
       </div>
@@ -33,7 +33,7 @@ export const UpcomingPool = ({ upcomingPoolData }) => {
       </div>
 
       {audited && (
-        <div className="text-gray-900 absolute right-0 -bottom-0.5 px-3 py-1.5 rounded-br-xl rounded-tl-xl bg-gradient-to-r from-yellow-200 to-blue-800">
+        <div className="text-gray-900 absolute right-0 -bottom-0.5 px-3 py-1.5 rounded-br-xl rounded-tl-xl bg-gradient-to-r from-yellow to-blue-1">
           AUDITED
         </div>
       )}

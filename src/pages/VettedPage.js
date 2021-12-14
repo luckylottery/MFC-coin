@@ -9,7 +9,7 @@ export const VettedPage = () => {
   const allPools = upcomingPools.filter(upcomingPool => upcomingPool.upcoming ? false : true);
 
   return (
-    <div className="w-11/12 mx-auto my-10">
+    <div className="w-11/12 mx-auto mt-10 mb-20">
       <VettedHeader />
       <UpcomingPools upcomingPools={upcomingPoolsData} />
       <AllPools allPools={allPools} />
