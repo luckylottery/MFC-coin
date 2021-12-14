@@ -1,6 +1,4 @@
 import { Input } from "antd";
-// eslint-disable-next-line no-unused-vars
-import { useState } from "react";
 
 export function CustomInput({ type = "text", validator, value, onChange }) {
   return (
