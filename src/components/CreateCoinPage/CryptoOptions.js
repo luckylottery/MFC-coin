@@ -72,7 +72,7 @@ export const CryptoOptions = ({selectedCrypto, setSelectedCrypto, routeId }) => 
                     onClick={() => setPage(PREVIOUS_PAGE)}>{"<"}</button>
                 <button
                     className="m-1 px-2 rounded text-white bg-blue-1 hover:bg-blue-1 duration-300 font-bold rounded-sm"
-                    onClick={() => setPage(NEXT_PAGE)}>
+                    onClick={() => setPage(NEXT_PAGE)}>{">"}
                 </button>
             </div>
 
