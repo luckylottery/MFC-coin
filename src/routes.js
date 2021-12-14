@@ -17,17 +17,21 @@ export const routes = [
     collapsable: true,
     children: [
       {
-        link: "/dashboard",
-        name: "Dashboard",
-      },
-      {
-        link: "/create-manage",
-        name: "Create & Manage",
-      },
-      {
-        link: "/coin-creation",
-        name: "Coin Creation",
-      },
+        link: "/vetted",
+        name: "Vetted"
+      }
+      // {
+      //   link: "/dashboard",
+      //   name: "Dashboard",
+      // },
+      // {
+      //   link: "/create-manage",
+      //   name: "Create & Manage",
+      // },
+      // {
+      //   link: "/coin-creation",
+      //   name: "Coin Creation",
+      // },
     ]
   },
   {
