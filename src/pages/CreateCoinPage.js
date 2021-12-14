@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 // import { CryptoOptions } from "../components/CreateCoinPage/CryptoOptions";
-// import { CreateCoinForm } from "../components/CreateCoinPage/CreateCoinForm";
+import { CreateCoinForm } from "../components/CreateCoinPage/CreateCoinForm";
 import { cryptoOptions } from "../data/CreateCoinAvailableCryptos";
 
 const coinMachineLogo = require("../images/Coin machine.png").default;
 
 export const CreateCoinPage = ({ selectedCrypto: selectedCryptoFromProps, match }) => {
-  const [/*selectedCrypto*/, setSelectedCrypto] = useState(selectedCryptoFromProps ? selectedCryptoFromProps : cryptoOptions.filter((crypto) => crypto?.default)[0])
-  const [/*routeId*/, setRouteId] = useState(null)
+  const [selectedCrypto, setSelectedCrypto] = useState(selectedCryptoFromProps ? selectedCryptoFromProps : cryptoOptions.filter((crypto) => crypto?.default)[0])
+  const [routeId, setRouteId] = useState(null)
   useEffect(() => {
     if (match?.params?.crypto) {
       setRouteId(match.params.crypto)
@@ -21,7 +21,9 @@ export const CreateCoinPage = ({ selectedCrypto: selectedCryptoFromProps, match 
     }
   }, [match.params.crypto])
 
-  console.log({ match });
+  // console.log({ match });
+  console.log("YO: ", { routeId });
+  console.log({ selectedCrypto });
 
   return (
     <div>
@@ -36,7 +38,7 @@ export const CreateCoinPage = ({ selectedCrypto: selectedCryptoFromProps, match 
               routeId={routeId} /> */}
           </div>
           <div className="rounded-b-coin-form bg-white col-start-1 col-end-8 sm:col-start-4 sm:col-end-8 sm:rounded-r-coin-form py-4">
-            {/* <CreateCoinForm selectedCrypto={selectedCrypto} /> */}
+            <CreateCoinForm selectedCrypto={selectedCrypto} />
           </div>
         </div>
       </div>
