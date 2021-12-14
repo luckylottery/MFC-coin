@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-// import { CryptoOptions } from "../components/CreateCoinPage/CryptoOptions";
-import { CreateCoinForm } from "../components/CreateCoinPage/CreateCoinForm";
+import { CryptoOptions } from "../components/CreateCoinPage/CryptoOptions";
+// import { CreateCoinForm } from "../components/CreateCoinPage/CreateCoinForm";
 import { cryptoOptions } from "../data/CreateCoinAvailableCryptos";
 
 const coinMachineLogo = require("../images/Coin machine.png").default;
@@ -34,11 +34,11 @@ export const CreateCoinPage = ({ selectedCrypto: selectedCryptoFromProps, match 
       <div className="grid grid-cols-6 py-6 mb-5" style={{ minHeight: 'calc(100vh - 64px - 234px)' }}>
         <div className="grid grid-cols-7 col-start-2 col-end-6 grid-rows-formContainer sm:grid-rows-1 border-2 rounded-coin-form-border shadow-coin-form-shadow">
           <div className="bg-yellow col-start-1 col-end-8 rounded-t-coin-form sm:rounded-tr-none sm:col-start-1 sm:col-end-4 sm:rounded-l-coin-form">
-            {/* <CryptoOptions selectedCrypto={selectedCrypto} setSelectedCrypto={setSelectedCrypto}
-              routeId={routeId} /> */}
+            <CryptoOptions selectedCrypto={selectedCrypto} setSelectedCrypto={setSelectedCrypto}
+              routeId={routeId} />
           </div>
           <div className="rounded-b-coin-form bg-white col-start-1 col-end-8 sm:col-start-4 sm:col-end-8 sm:rounded-r-coin-form py-4">
-            <CreateCoinForm selectedCrypto={selectedCrypto} />
+            {/* <CreateCoinForm selectedCrypto={selectedCrypto} /> */}
           </div>
         </div>
       </div>
