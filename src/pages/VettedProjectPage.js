@@ -21,8 +21,8 @@ export const VettedProjectPage = () => {
   }, [projectId]);
 
   return (
-    <div>
-      <div className="bg-gray-900 text-gray-300 py-5">
+    <div className="mt-10 mb-20">
+      <div className="bg-gray-900 text-gray-300 pt-5">
         <Link to="/vetted" className="flex items-center gap-2.5 text-xl w-11/12 mx-auto hover:text-white">
           <BsChevronLeft />
           <h1>GO BACK TO POOL LIST</h1>
