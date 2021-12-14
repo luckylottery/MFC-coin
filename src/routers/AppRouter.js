@@ -5,7 +5,7 @@ import { Sidebar } from "../components/Sidebar/Sidebar";
 import { HomePage } from "../pages/HomePage";
 import { VettedPage } from "../pages/VettedPage";
 import { VettedProjectPage } from "../pages/VettedProjectPage";
-import {CreateCoinPage} from "../pages/CreateCoinPage";
+import { CreateCoinPage } from "../pages/CreateCoinPage";
 
 export const AppRouter = () => {
   return (

@@ -1,10 +1,11 @@
 import { Drawer } from "../Drawer/Drawer";
 import { Button } from "../Button/Button";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import {
   connectWallet,
   getCurrentWalletConnected,
 } from "../../Utils/walletMainHandler";
+import { WalletContext } from "../../context/WalletContext";
 
 const MCFIcon = require("../../assets/Icons/LOGO MF_ICON.png").default;
 const Avatar = require("../../assets/Icons/Avatar.png").default;
@@ -12,17 +13,17 @@ const HeaderBelt = require("../../assets/Icons/Header_Belt.png").default;
 const Arrow = require("../../assets/Icons/Arrow down.png").default;
 
 export const Navbar = () => {
-  const [walletAddress, setWallet] = useState("");
+  const { walletAddress, setWalletAddress } = useContext(WalletContext);
   const [, /*status*/ setStatus] = useState("");
 
   function addWalletListener() {
     if (window.ethereum) {
       window.ethereum.on("accountsChanged", (accounts) => {
         if (accounts.length > 0) {
-          setWallet(accounts[0]);
+          setWalletAddress(accounts[0]);
           setStatus("👆🏽 Write a message in the text-field above.");
         } else {
-          setWallet("");
+          setWalletAddress("");
           setStatus("🦊 Connect to Metamask using the top right button.");
         }
       });
@@ -46,18 +47,28 @@ export const Navbar = () => {
   useEffect(() => {
     async function myFunction() {
       const { address, status } = await getCurrentWalletConnected();
-      setWallet(address);
+      setWalletAddress(address);
       setStatus(status);
       addWalletListener();
+
+      if (address !== '') {
+
+      }
     }
     myFunction();
   }, []);
 
   const connectWalletPressed = async () => {
-    const walletResponse = await connectWallet();
-    setStatus(walletResponse.status);
-    setWallet(walletResponse.address);
+    const { status, address } = await connectWallet();
+    setStatus(status);
+    setWalletAddress(address);
+
+    if (address !== '') {
+
+    }
+
   };
+
   return (
     <>
       <div className="text-blue-1 my-2.5 flex justify-between items-center w-full py-2 px-2 lg:px-10">
