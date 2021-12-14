@@ -43,7 +43,7 @@ export const CreateCoinForm = ({ selectedCrypto }) => {
         }]}>
         <Input className="w-full p-0.5 rounded focus:outline-none" />
       </Form.Item>
-      <Form.Item
+      {/* <Form.Item
         name="initialSupply"
         label={<label className="font-bold">Initial
           Supply</label>}
@@ -58,7 +58,7 @@ export const CreateCoinForm = ({ selectedCrypto }) => {
         <Input className="w-full p-0.5 rounded focus:outline-none" step="1" type={"text"} />
       </Form.Item>
 
-      {/* <Form.Item name="decimals"
+      <Form.Item name="decimals"
         label={<label className="font-bold">Decimals <span
           className="text-xs whitespace-nowrap">(1-18)</span></label>}
         className="grid grid-cols-1 sm:grid-cols-formItem p-4 break-words text-blue-2"
