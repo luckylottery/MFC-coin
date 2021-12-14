@@ -1,7 +1,6 @@
-import { Form, Input, Button } from 'antd';
-import Checkbox from "antd/es/checkbox/Checkbox";
-import Switch from "react-switch";
 import { useState } from "react";
+import { Form, Input, Button, Checkbox } from 'antd';
+import Switch from "react-switch";
 import '../../css/antdOverwrite.css'
 
 export const CreateCoinForm = ({ selectedCrypto }) => {
@@ -43,7 +42,7 @@ export const CreateCoinForm = ({ selectedCrypto }) => {
         }]}>
         <Input className="w-full p-0.5 rounded focus:outline-none" />
       </Form.Item>
-      {/* <Form.Item
+      <Form.Item
         name="initialSupply"
         label={<label className="font-bold">Initial
           Supply</label>}
@@ -74,7 +73,7 @@ export const CreateCoinForm = ({ selectedCrypto }) => {
         }]}
       >
         <Input className="w-full p-0.5 rounded focus:outline-none" step="1" type={"number"} />
-      </Form.Item> */}
+      </Form.Item>
       <Form.Item name="advancedSettings" label={<label className="font-bold">Advanced Settings</label>}
         className="px-4 text-blue-2" initialValue={advancedSettings}
         getValueFromEvent={(data) => data}>
