@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
-import { CryptoOptions } from "../components/CreateCoinPage/CryptoOptions";
-import { CreateCoinForm } from "../components/CreateCoinPage/CreateCoinForm";
+// import { CryptoOptions } from "../components/CreateCoinPage/CryptoOptions";
+// import { CreateCoinForm } from "../components/CreateCoinPage/CreateCoinForm";
 import { cryptoOptions } from "../data/CreateCoinAvailableCryptos";
 
-const coinMachineLogo = require("../images/Coin machine.png").default;
+// const coinMachineLogo = require("../images/Coin machine.png").default;
 
 export const CreateCoinPage = ({ selectedCrypto: selectedCryptoFromProps, match }) => {
-  const [selectedCrypto, setSelectedCrypto] = useState(selectedCryptoFromProps ? selectedCryptoFromProps : cryptoOptions.filter((crypto) => crypto?.default)[0])
-  const [routeId, setRouteId] = useState(null)
+  const [/*selectedCrypto*/, setSelectedCrypto] = useState(selectedCryptoFromProps ? selectedCryptoFromProps : cryptoOptions.filter((crypto) => crypto?.default)[0])
+  const [/*routeId*/, setRouteId] = useState(null)
   useEffect(() => {
     if (match?.params?.crypto) {
       setRouteId(match.params.crypto)
@@ -27,7 +27,7 @@ export const CreateCoinPage = ({ selectedCrypto: selectedCryptoFromProps, match 
     <div>
       <div className="grid grid-cols-6" style={{ margin: '50px 0 20px 0' }}>
         <h1 className="col-start-2 col-end-4 text-right self-center pr-8 text-blue-1 font-bold" style={{ fontSize: '30px' }}>Coin Creation</h1>
-        <img src={coinMachineLogo} style={{ height: '120px', objectFit: 'contain' }} alt="coin machine logo" />
+        {/* <img src={coinMachineLogo} style={{ height: '120px', objectFit: 'contain' }} alt="coin machine logo" /> */}
       </div>
       <div className="grid grid-cols-6 py-6 mb-5" style={{ minHeight: 'calc(100vh - 64px - 234px)' }}>
         <div className="grid grid-cols-7 col-start-2 col-end-6 grid-rows-formContainer sm:grid-rows-1 border-2 rounded-coin-form-border shadow-coin-form-shadow">
