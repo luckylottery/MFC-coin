@@ -19,6 +19,8 @@ export const CreateCoinForm = ({ selectedCrypto }) => {
 
   function decimalValidator(value, onChange) {
     console.log({ value, onChange });
+    console.log(value >= 1 && value <= 18);
+    console.log(Number(value));
     // if (value >= 1 && value <= 18) {
     //   onChange(value)
     // }
@@ -26,6 +28,7 @@ export const CreateCoinForm = ({ selectedCrypto }) => {
 
   function initialSupplyValidator(value, onChange) {
     console.log({ value, onChange });
+    console.log(typeof value);
     // if (value?.length <= 14) {
     //   onChange(value)
     // }
