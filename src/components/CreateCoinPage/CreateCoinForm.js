@@ -43,8 +43,11 @@ export const CreateCoinForm = ({ selectedCrypto }) => {
         }]}>
         <Input className="w-full p-0.5 rounded focus:outline-none" />
       </Form.Item>
-      <Form.Item name="initialSupply" label={<label className="font-bold">Initial
-        Supply</label>} className="grid grid-cols-1 sm:grid-cols-formItem p-4 text-blue-2"
+      <Form.Item
+        name="initialSupply"
+        label={<label className="font-bold">Initial
+          Supply</label>}
+        className="grid grid-cols-1 sm:grid-cols-formItem p-4 text-blue-2"
         rules={[{
           required: true,
           message: <label className="text-xs text-red-700">Please input your initial supply</label>
@@ -52,10 +55,10 @@ export const CreateCoinForm = ({ selectedCrypto }) => {
           whitespace: true, message: <label className="text-xs text-red-700">Please input your
             symbol</label>
         }]}>
-        <Input className="w-full p-0.5 rounded focus:outline-none" step="1" type={"text"}/>
+        <Input className="w-full p-0.5 rounded focus:outline-none" step="1" type={"text"} />
       </Form.Item>
 
-      <Form.Item name="decimals"
+      {/* <Form.Item name="decimals"
         label={<label className="font-bold">Decimals <span
           className="text-xs whitespace-nowrap">(1-18)</span></label>}
         className="grid grid-cols-1 sm:grid-cols-formItem p-4 break-words text-blue-2"
@@ -64,14 +67,14 @@ export const CreateCoinForm = ({ selectedCrypto }) => {
           message: <label className="text-xs text-red-700">Please input your decimal</label>,
         }, {
           validator: (rule, value, cb) => {
-            value > 18 || value < 1 ? cb("value must be between 1 and 18") : cb();
+            value > 18 || value < 1 ? cb(`value must be between 1 and 18 ${typeof value}`) : cb(typeof value);
           },
           message: <label className="text-xs text-red-700">Value should be more than 1 and less than
             18</label>,
         }]}
       >
-        <Input className="w-full p-0.5 rounded focus:outline-none" step="1" type={"number"}/>
-      </Form.Item>
+        <Input className="w-full p-0.5 rounded focus:outline-none" step="1" type={"number"} />
+      </Form.Item> */}
       <Form.Item name="advancedSettings" label={<label className="font-bold">Advanced Settings</label>}
         className="px-4 text-blue-2" initialValue={advancedSettings}
         getValueFromEvent={(data) => data}>
