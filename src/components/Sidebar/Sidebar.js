@@ -141,9 +141,9 @@ export const Sidebar = () => {
                   backgroundImage: `url("${MCFFrontIcon}")`
                 }}
               />
-              <label>$0,00034</label>
+              <label className={`${isOpen ? "" : "hidden"}`}>$0,00034</label>
             </div>
-            <div className="flex justify-center gap-5">
+            <div className={`flex justify-center gap-5 ${isOpen ? "" : "hidden"}`}>
               <h3>Poocoin</h3>
               <h3>Dextools</h3>
             </div>
