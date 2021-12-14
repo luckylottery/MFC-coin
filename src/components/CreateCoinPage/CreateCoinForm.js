@@ -3,7 +3,6 @@ import Checkbox from "antd/es/checkbox/Checkbox";
 import Switch from "react-switch";
 import { useState } from "react";
 import '../../css/antdOverwrite.css'
-import { CustomInput } from "./CustomInput";
 
 export const CreateCoinForm = ({ selectedCrypto }) => {
   const [form] = Form.useForm();
@@ -16,25 +15,6 @@ export const CreateCoinForm = ({ selectedCrypto }) => {
     labelCol: { span: 8 },
     wrapperCol: { span: 16 },
   };
-
-  function decimalValidator(value, onChange) {
-    console.log({ value, onChange });
-    console.log(value >= 1 && value <= 18);
-    console.log(Number(value));
-    // if (value >= 1 && value <= 18) {
-    //   onChange(value)
-    // }
-  }
-
-  function initialSupplyValidator(value, onChange) {
-    console.log({ value, onChange });
-    console.log(typeof value);
-    // if (value?.length <= 14) {
-    //   onChange(value)
-    // }
-  }
-
-  console.log({ form, advancedSettings, setAdvancedSettings, onFinish, layout, decimalValidator, initialSupplyValidator });
 
   return (
     <Form {...layout} form={form} name="control-hooks" onFinish={onFinish}>
@@ -72,7 +52,7 @@ export const CreateCoinForm = ({ selectedCrypto }) => {
           whitespace: true, message: <label className="text-xs text-red-700">Please input your
             symbol</label>
         }]}>
-        <CustomInput validator={initialSupplyValidator} type={"text"} />
+        <Input className="w-full p-0.5 rounded focus:outline-none" step="1" type={"text"}/>
       </Form.Item>
 
       <Form.Item name="decimals"
@@ -90,7 +70,7 @@ export const CreateCoinForm = ({ selectedCrypto }) => {
             18</label>,
         }]}
       >
-        <CustomInput validator={decimalValidator} type={"number"} />
+        <Input className="w-full p-0.5 rounded focus:outline-none" step="1" type={"number"}/>
       </Form.Item>
       <Form.Item name="advancedSettings" label={<label className="font-bold">Advanced Settings</label>}
         className="px-4 text-blue-2" initialValue={advancedSettings}

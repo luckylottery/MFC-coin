@@ -2,7 +2,7 @@ import { Input } from "antd";
 
 export function CustomInput({ type = "text", validator, value, onChange }) {
 
-  console.log("Props: ", { type, validator, value, onChange });
+  console.log("YO: ", onChange);
   return (
     <Input
       onChange={(e) =>
