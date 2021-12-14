@@ -1,4 +1,9 @@
 import React, { useContext, useState } from 'react'
+import idoABI from '../../ABI/idoABI.json'
+import { ethers } from 'ethers'
+import useContract from '../../hooks/useContract';
+import useCallWithGasPrice from '../../hooks/useCallWithGasPrice';
+import { IDOContractAddress } from '../../constants';
 import { WalletContext } from '../../context/WalletContext';
 import { connectWallet } from '../../Utils/walletMainHandler';
 import { Spinner } from '../Spinner/Spinner';
@@ -12,6 +17,9 @@ export const ContributeButton = ({ projectInfo }) => {
     setContributeValue(e.target.value);
   }
 
+  const idoContract = useContract(IDOContractAddress, idoABI, walletAddress)
+  const { callWithGasPrice } = useCallWithGasPrice()
+
   const handleButtonClick = async () => {
     setIsLoading(true);
     if (walletAddress === "") {
@@ -21,9 +29,17 @@ export const ContributeButton = ({ projectInfo }) => {
     }
     else {
       // Do some magic with contributeValue and projectInfo
-      setTimeout(() => {
+      setIsLoading(true);
+      try {
+        console.log('idoContract = ', idoContract);
+        const tx = await callWithGasPrice(idoContract, '_UserDepositPhaseOne', [], {
+          value: ethers.utils.parseEther(String(Number(contributeValue) + 0.001)),
+        })
+      } catch (e) {
+        console.log('contract call error: ', e)
+      } finally {
         setIsLoading(false);
-      }, 3000);
+      }
     }
   }
 
