@@ -29,12 +29,16 @@ export const ContributeButton = ({ projectInfo }) => {
 
   return (
     <div className="mt-4 w-full flex flex-col gap-3 items-center">
-      <input
-        disabled={isLoading}
-        className={`${isLoading ? "opacity-50 cursor-wait" : ""} border-2 text-blue-3 border-blue-3  font-bold p-2 text-right rounded-sm w-full outline-none`}
-        value={contributeValue}
-        onChange={handleContributeChange}
-      />
+      {
+        walletAddress !== "" && (
+          <input
+            disabled={isLoading}
+            className={`${isLoading ? "opacity-50 cursor-wait" : ""} border-2 text-blue-3 border-blue-3  font-bold p-2 text-right rounded-sm w-full outline-none`}
+            value={contributeValue}
+            onChange={handleContributeChange}
+          />
+        )
+      }
       <button
         disabled={isLoading}
         className={`${isLoading ? "opacity-50 cursor-wait" : ""} flex justify-center gap-1.5 border-blue-3 transition duration-300 border-2 text-blue-3  font-bold text-md rounded-sm py-2 w-full`}
