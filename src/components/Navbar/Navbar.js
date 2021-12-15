@@ -44,14 +44,17 @@ export const Navbar = () => {
       );
     }
   }
+  
   useEffect(() => {
     async function myFunction() {
       const { address, status } = await getCurrentWalletConnected();
-      setWalletAddress(address);
-      setStatus(status);
+      setWalletAddress(() => address);
+      setStatus(() => status);
       addWalletListener();
     }
     myFunction();
+    
+    // eslint-disable-next-line
   }, []);
 
   const connectWalletPressed = async () => {
