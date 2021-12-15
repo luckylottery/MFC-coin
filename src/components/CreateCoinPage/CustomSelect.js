@@ -1,23 +1,20 @@
 export function LpSwapOptions({value, onChange}) {
   function getLpSwapOptions() {
-    const id = 11
     const options = {
-      1: <option value={"(BSC)PancakeswapV2"}>(BSC)PancakeswapV2</option>,
-      2: <option value={"(BSCTEST)Pancakeswap"}>(BSCTEST)Pancakeswap</option>,
-      3: <option value={"(ETH)UNISWAP"}>(ETH)UNISWAP</option>,
-      4: <option value={"(ETH KOVAN)UNISWAP"}>(ETH KOVAN)UNISWAP</option>,
-      5: <option value={"(FTM)Spookyswap"}>(FTM)Spookyswap</option>,
-      6: <option value={"(FTM)Spookyswap"}>(FTM)Spookyswap</option>,
-      7: <option value={"(Moonriver)Solarbeam"}>(Moonriver)Solarbeam</option>,
-      8: <option value={"(Xdai)Honeyswap"}>(Xdai)Honeyswap</option>,
-      9: <option value={"(Cronos)Cronaswap"}>(Cronos)Cronaswap</option>,
-      10: <option value={"(AVAX)Hurricaneswap"}>(AVAX)Hurricaneswap</option>,
+      1: <option key="(BSC)PancakeswapV2" value={"(BSC)PancakeswapV2"}>(BSC)PancakeswapV2</option>,
+      2: <option key="(BSCTEST)Pancakeswap" value={"(BSCTEST)Pancakeswap"}>(BSCTEST)Pancakeswap</option>,
+      3: <option key="(ETH)UNISWAP" value={"(ETH)UNISWAP"}>(ETH)UNISWAP</option>,
+      4: <option key="(ETH KOVAN)UNISWAP" value={"(ETH KOVAN)UNISWAP"}>(ETH KOVAN)UNISWAP</option>,
+      5: <option key="(FTM)Spookyswap" value={"(FTM)Spookyswap"}>(ETH KOVAN)UNISWAP</option>,
+      6: <option key="(Polygon Matic)Quickswap" value={"(Polygon Matic)Quickswap"}>(Polygon Matic)Quickswap</option>,
+      7: <option key="(Moonriver)Solarbeam" value={"(Moonriver)Solarbeam"}>(Moonriver)Solarbeam</option>,
+      8: <option key="(Xdai)Honeyswap" value={"(Xdai)Honeyswap"}>(Xdai)Honeyswap</option>,
+      9: <option key="(Cronos)Cronaswap" value={"(Cronos)Cronaswap"}>(Cronos)Cronaswap</option>,
+      10: <option key="(AVAX)Hurricaneswap" value={"(AVAX)Hurricaneswap"}>(AVAX)Hurricaneswap</option>,
     }
-    if (options[id]) {
-      alert(1)
-      return options[id]
+    if (window?.ethereum?.networkVersion && options[window?.ethereum?.networkVersion]) {
+      return options[window?.ethereum?.networkVersion]
     }
-    console.log(Object.keys(options))
     return Object.values(options)
   }
 
