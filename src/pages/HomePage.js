@@ -134,17 +134,17 @@ export const HomePage = () => {
             <h1 className="text-center mb-5 text-blue-2">Featured on</h1>
             <div className="flex gap-5 flex-wrap justify-center">
               <a
-                href="https://www.coingecko.com/en/coins/meme-coin-factory
-"
+                href="https://www.coingecko.com/en/coins/meme-coin-factory"
                 target="_blank"
                 rel="noreferrer"
-              ></a>
-              <div
-                className="h-10 w-40 bg-center bg-contain bg-no-repeat"
-                style={{
-                  backgroundImage: `url("${coinGecko}")`,
-                }}
-              />
+              >
+                <div
+                  className="h-10 w-40 bg-center bg-contain bg-no-repeat"
+                  style={{
+                    backgroundImage: `url("${coinGecko}")`,
+                  }}
+                />
+              </a>
               <a
                 href="https://coinmarketcap.com/currencies/memecoinfactorytoken/
 "
@@ -171,7 +171,12 @@ export const HomePage = () => {
                   }}
                 />
               </a>
-              <a href="" target="_blank" rel="noreferrer">
+              <a
+                href="https://crypto.com/price/memecoin-factory
+"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <div
                   className="h-10 w-40 bg-center bg-contain bg-no-repeat"
                   style={{

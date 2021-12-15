@@ -10,7 +10,7 @@ import { WalletContext } from "../../context/WalletContext";
 const MCFIcon = require("../../assets/Icons/LOGO MF_ICON.png").default;
 const Avatar = require("../../assets/Icons/Avatar.png").default;
 const HeaderBelt = require("../../assets/Icons/Header_Belt.png").default;
-const Arrow = require("../../assets/Icons/Arrow down.png").default;
+//const Arrow = require("../../assets/Icons/Arrow down.png").default;
 
 export const Navbar = () => {
   const { walletAddress, setWalletAddress } = useContext(WalletContext);
