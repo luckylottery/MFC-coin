@@ -1,3 +1,5 @@
+import {useEffect} from "react";
+
 export function LpSwapOptions({value, onChange}) {
   function getLpSwapOptions() {
     const options = {
@@ -18,12 +20,18 @@ export function LpSwapOptions({value, onChange}) {
     return Object.values(options)
   }
 
+  useEffect(() => {
+    onChange(getLpSwapOptions()[0]?.props?.value)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
   return (
     <select
       onChange={(e) =>
         onChange(e?.target?.value)
       }
       className="p-0.5 rounded-sm focus:outline-none"
+      value={value}
     >
       {getLpSwapOptions()}
     </select>

@@ -11,8 +11,8 @@ export const CreateCoinForm = ({selectedCrypto}) => {
   const [form] = Form.useForm();
   const [advancedSettings, setAdvancedSettings] = useState(false)
   const [deflation, setDeflation] = useState(false)
-  const [holdersRewardFee, setHoldersRewardFee] = useState(false)
-  const [automaticLp, setAutomaticLp] = useState(false)
+  const [holdersRewardFee, ] = useState(true)
+  const [automaticLp, ] = useState(true)
   const [loader, setLoader] = useState(false)
 
 
@@ -181,9 +181,7 @@ export const CreateCoinForm = ({selectedCrypto}) => {
                      getValueFromEvent={(data) => data}>
             <Switch checked={holdersRewardFee} className="mt-4" handleDiameter={20} uncheckedIcon={null}
                     checkedIcon={null} onColor="#7280bc" offColor="#e4e9ff"
-                    offHandleColor='#405cd0' onHandleColor='#e4e9ff' onChange={() => {
-              setHoldersRewardFee(!holdersRewardFee)
-            }}/>
+                    offHandleColor='#405cd0' onHandleColor='#e4e9ff'/>
           </Form.Item>
           {holdersRewardFee ? <Form.Item name="holdersRewardFeeInput"
                                          label={<label className="font-bold text-sm">Holders reward fee:</label>}
@@ -204,9 +202,7 @@ export const CreateCoinForm = ({selectedCrypto}) => {
                      getValueFromEvent={(data) => data}>
             <Switch checked={automaticLp} className="mt-4" handleDiameter={20} uncheckedIcon={null}
                     checkedIcon={null} onColor="#7280bc" offColor="#e4e9ff"
-                    offHandleColor='#405cd0' onHandleColor='#e4e9ff' onChange={() => {
-              setAutomaticLp(!automaticLp)
-            }}/>
+                    offHandleColor='#405cd0' onHandleColor='#e4e9ff'/>
           </Form.Item>
           {automaticLp ? (
             <>
