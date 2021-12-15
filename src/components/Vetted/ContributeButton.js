@@ -1,5 +1,4 @@
-import React, { useContext } from 'react'
-import { useState } from 'react/cjs/react.development';
+import React, { useContext, useState } from 'react'
 import { WalletContext } from '../../context/WalletContext';
 import { connectWallet } from '../../Utils/walletMainHandler';
 import { Spinner } from '../Spinner/Spinner';
