@@ -1,15 +1,13 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { BiLinkExternal } from "react-icons/bi";
 import { BsChevronLeft } from "react-icons/bs";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
+import { ContributeButton } from "../components/Vetted/ContributeButton";
 import { ProjectInformation } from "../components/Vetted/ProjectInformation/ProjectInformation";
-import { WalletContext } from "../context/WalletContext";
 import { upcomingPools } from "../data/upcomingPools"
 
 export const VettedProjectPage = () => {
-
-  const { walletAddress, setWalletAddress } = useContext(WalletContext);
   const [vettedProjectData, setVettedProjectData] = useState();
   const { projectId } = useParams();
 
@@ -83,11 +81,7 @@ export const VettedProjectPage = () => {
                     <h5 className="mt-1 text-xl text-blue-3">{vettedProjectData.tokenAddress}</h5>
                   </div>
                 </div>
-                <button
-                  className="border-2 text-blue-3 border-blue-3 font-bold text-md rounded-sm py-2 mt-4 w-full"
-                >
-                  {walletAddress === "" ? "CONNECT WALLET TO PARTICIPATE" : "CONTRIBUTE"}
-                </button>
+                <ContributeButton projectInfo={vettedProjectData} />
               </div>
               <div className="border-blue-3 rounded-sm border-2 p-10 bg-blue-4 w-full">
                 <div className="flex flex-col sm:flex-row md:flex-col lg:flex-row lg:gap-5 md:gap-0 sm:gap-5">

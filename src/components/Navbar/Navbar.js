@@ -50,10 +50,6 @@ export const Navbar = () => {
       setWalletAddress(address);
       setStatus(status);
       addWalletListener();
-
-      if (address !== '') {
-
-      }
     }
     myFunction();
   }, []);
@@ -62,11 +58,6 @@ export const Navbar = () => {
     const { status, address } = await connectWallet();
     setStatus(status);
     setWalletAddress(address);
-
-    if (address !== '') {
-
-    }
-
   };
 
   return (
