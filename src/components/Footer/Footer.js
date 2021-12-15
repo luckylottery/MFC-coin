@@ -1,17 +1,19 @@
-const belt = require('../../assets/images/Belt.png').default;
-const blueBlox = require('../../assets/images/boxes/box blue.png').default;
-const originalBox = require('../../assets/images/boxes/box original.png').default;
-const redBox = require('../../assets/images/boxes/box red.png').default;
-const yellowBox = require('../../assets/images/boxes/box yellow.png').default;
-const greenBox = require('../../assets/images/boxes/box green.png').default;
+const belt = require("../../assets/images/Belt.png").default;
+const blueBlox = require("../../assets/images/boxes/box blue.png").default;
+const originalBox =
+  require("../../assets/images/boxes/box original.png").default;
+const redBox = require("../../assets/images/boxes/box red.png").default;
+const yellowBox = require("../../assets/images/boxes/box yellow.png").default;
+const greenBox = require("../../assets/images/boxes/box green.png").default;
 
-const memecoinLogo = require('../../assets/Icons/Memefactory Logo L.png').default;
+const memecoinLogo =
+  require("../../assets/Icons/Memefactory Logo L.png").default;
 
-const discord = require('../../assets/Icons/social/Discord.png').default;
-const facebook = require('../../assets/Icons/social/Facebook.png').default;
-const reddit = require('../../assets/Icons/social/Reddit.png').default;
-const telegram = require('../../assets/Icons/social/Telegram.png').default;
-const twitter = require('../../assets/Icons/social/Twitter.png').default;
+const discord = require("../../assets/Icons/social/Discord.png").default;
+const facebook = require("../../assets/Icons/social/Facebook.png").default;
+const reddit = require("../../assets/Icons/social/Reddit.png").default;
+const telegram = require("../../assets/Icons/social/Telegram.png").default;
+const twitter = require("../../assets/Icons/social/Twitter.png").default;
 
 export const Footer = () => {
   return (
@@ -19,50 +21,50 @@ export const Footer = () => {
       <div
         className="relative w-full h-7 bg-cover bg-no-repeat"
         style={{
-          backgroundImage: `url("${belt}")`
+          backgroundImage: `url("${belt}")`,
         }}
       >
         <div className="absolute w-full flex justify-evenly -top-10">
           <div
             className="w-10 h-10 bg-cover rounded-t"
             style={{
-              backgroundImage: `url("${redBox}")`
+              backgroundImage: `url("${redBox}")`,
             }}
           />
           <div
             className="w-10 h-10 bg-cover rounded-t"
             style={{
-              backgroundImage: `url("${blueBlox}")`
+              backgroundImage: `url("${blueBlox}")`,
             }}
           />
           <div
             className="w-10 h-10 bg-cover rounded-t"
             style={{
-              backgroundImage: `url("${originalBox}")`
+              backgroundImage: `url("${originalBox}")`,
             }}
           />
           <div
             className="w-10 h-10 bg-cover rounded-t"
             style={{
-              backgroundImage: `url("${yellowBox}")`
+              backgroundImage: `url("${yellowBox}")`,
             }}
           />
           <div
             className="w-10 h-10 bg-cover rounded-t"
             style={{
-              backgroundImage: `url("${greenBox}")`
+              backgroundImage: `url("${greenBox}")`,
             }}
           />
           <div
             className="w-10 h-10 bg-cover rounded-t hidden sm:block"
             style={{
-              backgroundImage: `url("${redBox}")`
+              backgroundImage: `url("${redBox}")`,
             }}
           />
           <div
             className="w-10 h-10 bg-cover rounded-t hidden sm:block"
             style={{
-              backgroundImage: `url("${yellowBox}")`
+              backgroundImage: `url("${yellowBox}")`,
             }}
           />
         </div>
@@ -72,7 +74,7 @@ export const Footer = () => {
           <div
             className="w-28 h-20 bg-contain bg-no-repeat"
             style={{
-              backgroundImage: `url("${memecoinLogo}")`
+              backgroundImage: `url("${memecoinLogo}")`,
             }}
           />
           <div className="flex flex-col text-xs">
@@ -83,29 +85,68 @@ export const Footer = () => {
         <div className="text-center">
           <label>Follow our Socials</label>
           <div className="flex gap-5 justify-center my-5">
-            <a href="https://www.google.com" rel="noreferrer" target="_blank" className="flex-shrink-0">
-              <img src={facebook} alt="facebook" className="w-7 h-7 rounded-full" />
+            <a
+              href="https://www.facebook.com/MemeCoinFactory/"
+              rel="noreferrer"
+              target="_blank"
+              className="flex-shrink-0"
+            >
+              <img
+                src={facebook}
+                alt="facebook"
+                className="w-7 h-7 rounded-full"
+              />
             </a>
-            <a href="https://www.google.com" rel="noreferrer" target="_blank" className="flex-shrink-0">
-              <img src={telegram} alt="telegram" className="w-7 h-7 rounded-full" />
+            <a
+              href="https://t.me/memecoinfactory"
+              rel="noreferrer"
+              target="_blank"
+              className="flex-shrink-0"
+            >
+              <img
+                src={telegram}
+                alt="telegram"
+                className="w-7 h-7 rounded-full"
+              />
             </a>
-            <a href="https://www.google.com" rel="noreferrer" target="_blank" className="flex-shrink-0">
-              <img src={discord} alt="discord" className="w-7 h-7 rounded-full" />
+            <a
+              href="https://discord.gg/memecoinfactory"
+              rel="noreferrer"
+              target="_blank"
+              className="flex-shrink-0"
+            >
+              <img
+                src={discord}
+                alt="discord"
+                className="w-7 h-7 rounded-full"
+              />
             </a>
-            <a href="https://www.google.com" rel="noreferrer" target="_blank" className="flex-shrink-0">
-              <img src={twitter} alt="twitter" className="w-7 h-7 rounded-full" />
+            <a
+              href="https://www.twitter.com/MemecoinF"
+              rel="noreferrer"
+              target="_blank"
+              className="flex-shrink-0"
+            >
+              <img
+                src={twitter}
+                alt="twitter"
+                className="w-7 h-7 rounded-full"
+              />
             </a>
-            <a href="https://www.google.com" rel="noreferrer" target="_blank" className="flex-shrink-0">
+            <a
+              href="https://www.reddit.com/r/MemecoinFactory/"
+              rel="noreferrer"
+              target="_blank"
+              className="flex-shrink-0"
+            >
               <img src={reddit} alt="reddit" className="w-7 h-7 rounded-full" />
             </a>
           </div>
         </div>
         <div className="flex gap-5 justify-center font-bold text-center">
           <label>CONTACT</label>
-          <label>COMMUNITY</label>
-          <label>BETTING RULES & TERMS</label>
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};

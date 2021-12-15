@@ -107,8 +107,20 @@ export const Drawer = () => {
                 <label>$0,00034</label>
               </div>
               <div className="flex justify-center gap-5">
-                <h3>Poocoin</h3>
-                <h3>Dextools</h3>
+                <a
+                  href="https://poocoin.app/tokens/0x6e1f76017024baf9dc52a796dc4e5ae3110005c2
+"
+                  rel="noreferrer"
+                >
+                  <button>Poocoin</button>
+                </a>
+                <a
+                  href="https://www.dextools.io/app/bsc/pair-explorer/0xb79d5d8531c0aa574a763f532d28d5c8ab4c56de
+"
+                  rel="noreferrer"
+                >
+                  <h3>Dextools</h3>
+                </a>
               </div>
             </div>
           </div>
