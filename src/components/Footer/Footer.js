@@ -145,8 +145,6 @@ export const Footer = () => {
         </div>
         <div className="flex gap-5 justify-center font-bold text-center">
           <label>CONTACT</label>
-          <label>COMMUNITY</label>
-          <label>BETTING RULES & TERMS</label>
         </div>
       </div>
     </footer>

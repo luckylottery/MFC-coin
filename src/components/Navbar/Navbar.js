@@ -76,7 +76,6 @@ export const Navbar = () => {
               onClick="location.href='www.google.com'"
             />
           </a>
-          <label className="font-bold">$14.55</label>
         </div>
         <div className="flex gap-5 items-center">
           <button>Help</button>
