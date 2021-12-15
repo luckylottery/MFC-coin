@@ -44,7 +44,7 @@ export const Navbar = () => {
       );
     }
   }
-  
+
   useEffect(() => {
     async function myFunction() {
       const { address, status } = await getCurrentWalletConnected();
@@ -53,7 +53,7 @@ export const Navbar = () => {
       addWalletListener();
     }
     myFunction();
-    
+
     // eslint-disable-next-line
   }, []);
 
@@ -68,7 +68,14 @@ export const Navbar = () => {
       <div className="text-blue-1 my-2.5 flex justify-between items-center w-full py-2 px-2 lg:px-10">
         <div className="flex items-center gap-3">
           <Drawer />
-          <Button color="blue" text="Buy" imageSRC={MCFIcon} />
+          <a href="https://pancakeswap.finance/swap?outputCurrency=0x6e1f76017024baf9dc52a796dc4e5ae3110005c2">
+            <Button
+              color="blue"
+              text="Buy"
+              imageSRC={MCFIcon}
+              onClick="location.href='www.google.com'"
+            />
+          </a>
           <label className="font-bold">$14.55</label>
         </div>
         <div className="flex gap-5 items-center">
@@ -95,13 +102,6 @@ export const Navbar = () => {
               className="h-10 w-10 bg-no-repeat bg-contain bg-center"
               style={{ backgroundImage: `url("${Avatar}")` }}
             />
-            <div className="flex items-center gap-2.5">
-              Verr Golden
-              <div
-                className="h-3 w-3 bg-no-repeat bg-contain bg-center transform rotate-180"
-                style={{ backgroundImage: `url("${Arrow}")` }}
-              />
-            </div>
           </div>
         </div>
       </div>
