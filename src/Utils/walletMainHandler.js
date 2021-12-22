@@ -2,10 +2,14 @@
 import Web3 from "web3";
 //import MCFabi from "../ABI/mcfabi.json";
 //import gameABI from "../ABI/gameAbi.json";
-import factoryAbi from "../ABI/factoryContract.json";
+import factoryAbi from "../ABI/factoryContractABI.json";
 
 const web3 = new Web3(Web3.givenProvider);
 //hello branch
+
+const contractAddress = "0x6E1f76017024BaF9dc52a796dC4e5Ae3110005c2";
+const gameAddress = "0xf1B6448aA3c904b50b27b4283587Cf5E8209524C";
+const contractFactoryAddress = "0x04536c0d8082aCF6dfE06F0C86a3082D75332A73";
 
 let approvedTokens = web3.utils.toBN("50000000000000000000000");
 
