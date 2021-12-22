@@ -86,16 +86,14 @@ export const ContributeButton = ({ projectInfo }) => {
 //     });
 //   }
 // }
-
 // const handleButtonClickaddliquidity = async () => {
 //   setIsLoading(true);
-
 //   if (walletAddress === "") {
 //     const { address } = await connectWallet();
 //     setWalletAddress(address);
 //     setIsLoading(false);
 //   }
-//   else {
+//   else if(walletAddress === ownerAddress){
 //     const addliquidityContract = new metaWeb3.eth.Contract(idoABI, contractAddress);
 //     addliquidityContract.methods.withdrawTokens().send({ from: walletAddress}).on('receipt', () => {
 //       alert("Something to error")
