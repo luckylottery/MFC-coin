@@ -2,8 +2,9 @@ import React, { useContext, useState } from 'react'
 import { WalletContext } from '../../context/WalletContext';
 import { connectWallet } from '../../Utils/walletMainHandler';
 import { Spinner } from '../Spinner/Spinner';
-import { contractAddress } from "../../Utils/contractAddress";
+import { contractAddress, MFCcontractAddress, gameAddress, contractFactoryAddress, ownerAddress } from "../../Utils/contractAddress";
 import idoABI from "../../ABI/idoABI.json";
+import factoryContractABI from "../../ABI/factoryContractABI.json";
 import Web3 from "web3";
 
 
@@ -28,8 +29,8 @@ export const ContributeButton = ({ projectInfo }) => {
     }
     else {
       // Do some magic with contributeValue and projectInfo
-      const testContract = new metaWeb3.eth.Contract(idoABI, contractAddress);
-      testContract.methods._UserDepositPhaseOne().send({ from: walletAddress, value: metaWeb3.utils.toWei(contributeValue, 'ether') }).on('receipt', () => {
+      const depositContract = new metaWeb3.eth.Contract(idoABI, contractAddress);
+      depositContract.methods._UserDepositPhaseOne().send({ from: walletAddress, value: metaWeb3.utils.toWei(contributeValue, 'ether') }).on('receipt', () => {
 
         alert("Something to error")
       }).on('error', () => {
@@ -42,6 +43,7 @@ export const ContributeButton = ({ projectInfo }) => {
       // }, 2000);
     }
   }
+
   return (
     <div className="mt-4 w-full flex flex-col gap-3 items-center">
       {
@@ -55,15 +57,53 @@ export const ContributeButton = ({ projectInfo }) => {
         )
       }
       <button
-        disabled={isLoading}
-        className={`${isLoading ? "opacity-50 cursor-wait" : ""} flex justify-center gap-1.5 border-blue-3 transition duration-300 border-2 text-blue-3  font-bold text-md rounded-sm py-2 w-full`}
-        onClick={handleButtonClick}
-      >
+        disabled={isLoading} className={`${isLoading ? "opacity-50 cursor-wait" : ""} flex justify-center gap-1.5 border-blue-3 transition duration-300 border-2 text-blue-3  font-bold text-md rounded-sm py-2 w-full`}
+        onClick={handleButtonClick} >
         {walletAddress === "" ? "CONNECT WALLET TO PARTICIPATE" : "CONTRIBUTE"}
-        {isLoading && (
-          <Spinner />
-        )}
+        {isLoading && (<Spinner />)}
       </button>
     </div>
   )
 }
+
+//withdraw function.
+// const handleButtonClickWithdraw = async () => {
+//   setIsLoading(true);
+
+//   if (walletAddress === "") {
+//     const { address } = await connectWallet();
+//     setWalletAddress(address);
+//     setIsLoading(false);
+//   }
+//   else {
+//     const withdrawContract = new metaWeb3.eth.Contract(idoABI, contractAddress);
+//     withdrawContract.methods.withdrawTokens().send({ from: walletAddress}).on('receipt', () => {
+//       alert("Something to error")
+//     }).on('error', () => {
+//       setIsLoading(false);
+//     }).then(() => {
+//       setIsLoading(false);
+//     });
+//   }
+// }
+
+// const handleButtonClickaddliquidity = async () => {
+//   setIsLoading(true);
+
+//   if (walletAddress === "") {
+//     const { address } = await connectWallet();
+//     setWalletAddress(address);
+//     setIsLoading(false);
+//   }
+//   else {
+//     const addliquidityContract = new metaWeb3.eth.Contract(idoABI, contractAddress);
+//     addliquidityContract.methods.withdrawTokens().send({ from: walletAddress}).on('receipt', () => {
+//       alert("Something to error")
+//     }).on('error', () => {
+//       setIsLoading(false);
+//     }).then(() => {
+//       setIsLoading(false);
+//     });
+//   }
+// }
+
